@@ -1,0 +1,60 @@
+/**
+ * auto-generated code
+ * $date
+ */
+$pkgName
+
+import $modelPkg.$paramClassName;
+import $modelPkg.$pojoClassName;
+import $controlPkg.$boClassName;
+import $servicePkg.$serviceClassName;
+import com.alibaba.dubbo.rpc.RpcContext;
+import com.jambo.jop.exception.BusinessException;
+import com.jambo.jop.infrastructure.control.AbstractBO;
+import com.jambo.jop.infrastructure.db.BaseResponse;
+import com.jambo.jop.infrastructure.db.DataPackageWrap;
+import com.jambo.jop.infrastructure.service.BaseServiceImpl;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+/**
+ * <p>Title: $className </p>;
+ * <p>Description: dubbo service impl </p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: jambo-framework Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+public class $className extends BaseServiceImpl implements $serviceClassName {
+    private static final Logger logger = LogManager.getLogger(${className}.class);
+    public $boClassName bo;
+
+    @Override
+    public AbstractBO getBO() throws Exception {
+        if (bo == null) bo = ($boClassName) getBO(${boClassName}.class);
+        return bo;
+    }
+
+    public DataPackageWrap<$pojoClassName> query($paramClassName request) throws BusinessException {
+        DataPackageWrap response = new DataPackageWrap<$pojoClassName>(request.getSerialNo(), Constants.RESPONSE_RET_CODE_SUCCESS, null);
+        response.wrap(super.query(request));
+        return response;
+    }
+
+    public BaseResponse<$pojoClassName> manager($paramClassName request, $pojoClassName vo) throws BusinessException {
+        BaseResponse response = new BaseResponse(request.getSerialNo(), Constants.RESPONSE_RET_CODE_SUCCESS, null);
+        response.setVo(super.manager(request, vo));
+        return response;
+    }
+
+    public BaseResponse<$pojoClassName> findByPk($paramClassName request, Serializable pk) throws Exception {
+        BaseResponse response = new BaseResponse(request.getSerialNo(), Constants.RESPONSE_RET_CODE_SUCCESS, null);
+        response.setVo(super.findByPk(request, pk));
+        return response;
+    }
+
+}

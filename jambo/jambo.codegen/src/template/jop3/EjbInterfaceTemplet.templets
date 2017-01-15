@@ -1,0 +1,45 @@
+/**
+ * auto-generated code
+ * $date
+ */
+$pkgName
+
+import java.io.Serializable;
+
+#if($isListVO.booleanValue())
+import $modelPkg.$listVOClassName;
+#end
+import $modelPkg.$poClassName;
+import com.sunrise.jop.infrastructure.control.AbstractControl;
+import com.sunrise.jop.infrastructure.db.DBAccessUser;
+import com.sunrise.jop.infrastructure.db.DataPackage;
+
+/**
+ * <p>Title: $className </p>;
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: sunrise Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+public interface $className extends AbstractControl {
+    public $poClassName doCreate($poClassName vo)
+        throws Exception;
+
+    public void doRemoveByVO($poClassName vo)
+        throws Exception;
+
+    public void doRemoveByPK(Serializable pk) throws Exception;
+    
+    public $poClassName doUpdate($poClassName vo)
+        throws Exception;
+
+    public $poClassName doFindByPk(Serializable pk)
+        throws Exception;
+
+#if($isListVO.booleanValue())
+    public DataPackage doQuery($listVOClassName params)
+        throws Exception;
+#end
+
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:/spring/jdbc.properties"/>
+    </bean>
+
+    <!--公共配置-->
+    <import resource="springContext.xml"/>
+    <!--公共库连接配置-->
+    <import resource="commonDBContext.xml"/>
+
+    <!--范例，参考用-->
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service interface="com.jambo.exam.service.ExampleService" ref="exampleService" />
+    <!-- 和本地bean一样实现服务 -->
+    <bean id="exampleService" class="com.jambo.exam.service.ExampleServiceImpl" />
+    <!--范例-->
+
+    <!--范例，数据字典服务(code2name)-->
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service interface="com.jambo.jop.infrastructure.component.Code2NameService" ref="code2NameService" />
+    <!-- 和本地bean一样实现服务 -->
+    <bean id="code2NameService" class="com.jambo.jop.infrastructure.component.impl.Code2NameServiceImpl" />
+</beans>

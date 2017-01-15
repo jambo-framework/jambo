@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+    <property name="jdbc.batch_size">25</property>
+    <property name="jdbc.fetch_size">50</property>
+    <property name="show_sql">true</property>
+
+    <!--
+    显示sql的设置放到 log4j中， 以便方便的控制输出格式和位置，
+    配置项例如：log4j.logger.org.hibernate.SQL=DEBUG,simpleAppStdout
+    <property name="show_sql">true</property>  -->
+    <property name="hibernate.hbm2ddl.auto">update</property>
+
+	<mapping resource="com/jambo/exam/business/example/company/persistent/company.hbm.xml" />
+	<mapping resource="com/jambo/exam/business/example/employee/persistent/employee.hbm.xml" />
+	<mapping resource="com/jambo/exam/business/example/companyemp/persistent/companyEmp.hbm.xml" />
+
+    <mapping resource="com/jambo/jop/business/base/dictitem/Dictitem.hbm.xml" />
+
+</session-factory>
+</hibernate-configuration>
+

@@ -1,0 +1,19 @@
+/**
+ * auto-generated code
+ * $date
+ */
+$pkgName
+
+import $modelPkg.$ListVOName;
+
+/**
+ * <p>Title: $className </p>;
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: sunrise Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+public class $className extends $ListVOName {
+
+}

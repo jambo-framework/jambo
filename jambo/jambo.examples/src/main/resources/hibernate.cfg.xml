@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+    <property name="jdbc.batch_size">25</property>
+    <property name="jdbc.fetch_size">50</property>
+    <property name="show_sql">true</property>
+
+    <!--自动建表，范例用-->
+    <property name="hibernate.hbm2ddl.auto">update</property>
+
+    <mapping resource="com/jambo/exam/business/example/company/persistent/company.hbm.xml" />
+	<mapping resource="com/jambo/exam/business/example/employee/persistent/employee.hbm.xml" />
+	<mapping resource="com/jambo/exam/business/example/companyemp/persistent/companyEmp.hbm.xml" />
+	
+	<!--<mapping resource="com/jambo/jop/business/base/dictitem/dictitem.hbm.xml" />-->
+    <!--<mapping resource="com/jambo/jop/business/system/config/dictgroup/persistent/dictgroup.hbm.xml" />-->
+
+<!--
+	已经过时内容
+	<mapping resource="com/jambo/jop/business/system/function/businesslog/managelog/persistent/Managelog.hbm.xml" />
+		
+	<mapping resource="com/jambo/jop/business/system/org/org/persistent/Org.hbm.xml" />
+	<mapping resource="com/jambo/jop/business/system/org/org/persistent/Zoneinfo.hbm.xml" />
+	<mapping resource="com/jambo/jop/business/system/org/org/persistent/Departinfo.hbm.xml" />
+
+	<mapping resource="com/jambo/jop/business/system/module/persistent/Module.hbm.xml" />
+	<mapping resource="com/jambo/jop/business/system/user/role/persistent/Role.hbm.xml" />
+	<mapping resource="com/jambo/jop/business/system/user/operator/persistent/Operator.hbm.xml" />
+	<mapping resource="com/jambo/jop/business/system/user/rolegroup/persistent/RoleGroup.hbm.xml" />
+	<mapping resource="com/jambo/jop/business/system/user/operrole/persistent/OperRole.hbm.xml" />
+	<mapping resource="com/jambo/jop/business/system/user/rolerolegroup/persistent/RoleRolegroup.hbm.xml" />
+	<mapping resource="com/jambo/jop/business/system/permission/perm/persistent/Perm.hbm.xml" />
+	<mapping resource="com/jambo/jop/business/system/permission/operperm/persistent/OperPerm.hbm.xml" />
+	<mapping resource="com/jambo/jop/business/system/permission/roleperm/persistent/RolePerm.hbm.xml" />
+	<mapping resource="com/jambo/jop/business/system/ruledef/persistent/ruledef.hbm.xml" />
+	
+	<- ISPF ->
+	<mapping resource="com/jambo/jop/ispf/business/config/buscode/persistent/buscode.hbm.xml" />
+	<mapping resource="com/jambo/jop/ispf/business/chk/translog/persistent/translog.hbm.xml" />
+	
+	
+	SOA管理相关, interface def, rule management,service def 
+    <mapping resource="com/jambo/jop/system/monitor/business/accessmonitor/persistent/monitor.hbm.xml" />
+    
+	<mapping resource="com/jambo/jop/business/system/soa/adapter/interfacedef/persistent/Interfacedef.hbm.xml" />
+	<mapping resource="com/jambo/jop/system/monitor/business/accessmonitor/persistent/acctmonitor.hbm.xml" />
+-->
+</session-factory>
+</hibernate-configuration>

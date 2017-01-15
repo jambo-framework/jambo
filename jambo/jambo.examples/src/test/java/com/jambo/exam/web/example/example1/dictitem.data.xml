@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<!-- preparation data -->
+	<SA_DB_DICTITEM DICTID="0" DICTNAME="菜单" GROUPID="MODULE_TYPE"/>
+	<SA_DB_DICTITEM DICTID="1" DICTNAME="模块" GROUPID="MODULE_TYPE"/>
+
+</dataset>

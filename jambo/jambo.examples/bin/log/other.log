@@ -1,0 +1,606 @@
+2015-07-17 16:16:23,810 INFO ? (main:[]) using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2015-07-17 16:16:24,181 INFO com.alibaba.dubbo.container.Main (main:[])  [DUBBO] Use container type([log4j, spring]) to run dubbo serivce., dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:24,182 INFO com.alibaba.dubbo.container.Main (main:[])  [DUBBO] Dubbo Log4jContainer started!, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:29,052 INFO org.hibernate.cfg.Environment (main:[]) HHH000206: hibernate.properties not found
+2015-07-17 16:16:29,386 DEBUG org.hibernate.internal.util.xml.DTDEntityResolver (main:[]) Attempting to resolve on classpath under org/hibernate/
+2015-07-17 16:16:29,485 DEBUG org.hibernate.internal.util.xml.DTDEntityResolver (main:[]) Attempting to resolve on classpath under org/hibernate/
+2015-07-17 16:16:29,563 DEBUG org.hibernate.internal.util.xml.DTDEntityResolver (main:[]) Attempting to resolve on classpath under org/hibernate/
+2015-07-17 16:16:29,628 DEBUG org.hibernate.internal.util.xml.DTDEntityResolver (main:[]) Attempting to resolve on classpath under org/hibernate/
+2015-07-17 16:16:29,690 DEBUG org.hibernate.internal.util.xml.DTDEntityResolver (main:[]) Attempting to resolve on classpath under org/hibernate/
+2015-07-17 16:16:29,989 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [Cache71] -> [org.hibernate.dialect.Cache71Dialect]
+2015-07-17 16:16:29,990 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [CUBRID] -> [org.hibernate.dialect.CUBRIDDialect]
+2015-07-17 16:16:29,992 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [DB2] -> [org.hibernate.dialect.DB2Dialect]
+2015-07-17 16:16:29,993 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [DB2390] -> [org.hibernate.dialect.DB2390Dialect]
+2015-07-17 16:16:29,993 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [DB2400] -> [org.hibernate.dialect.DB2400Dialect]
+2015-07-17 16:16:29,995 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [DerbyTenFive] -> [org.hibernate.dialect.DerbyTenFiveDialect]
+2015-07-17 16:16:29,996 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [DerbyTenSix] -> [org.hibernate.dialect.DerbyTenSixDialect]
+2015-07-17 16:16:29,997 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [DerbyTenSeven] -> [org.hibernate.dialect.DerbyTenSevenDialect]
+2015-07-17 16:16:29,999 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [Firebird] -> [org.hibernate.dialect.FirebirdDialect]
+2015-07-17 16:16:30,001 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [FrontBase] -> [org.hibernate.dialect.FrontBaseDialect]
+2015-07-17 16:16:30,003 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [H2] -> [org.hibernate.dialect.H2Dialect]
+2015-07-17 16:16:30,005 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [HSQL] -> [org.hibernate.dialect.HSQLDialect]
+2015-07-17 16:16:30,007 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [Informix] -> [org.hibernate.dialect.InformixDialect]
+2015-07-17 16:16:30,009 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [Ingres] -> [org.hibernate.dialect.IngresDialect]
+2015-07-17 16:16:30,010 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [Ingres9] -> [org.hibernate.dialect.Ingres9Dialect]
+2015-07-17 16:16:30,011 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [Ingres10] -> [org.hibernate.dialect.Ingres10Dialect]
+2015-07-17 16:16:30,012 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [Interbase] -> [org.hibernate.dialect.InterbaseDialect]
+2015-07-17 16:16:30,013 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [JDataStore] -> [org.hibernate.dialect.JDataStoreDialect]
+2015-07-17 16:16:30,014 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [Mckoi] -> [org.hibernate.dialect.MckoiDialect]
+2015-07-17 16:16:30,015 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [MimerSQL] -> [org.hibernate.dialect.MimerSQLDialect]
+2015-07-17 16:16:30,017 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [MySQL5] -> [org.hibernate.dialect.MySQL5Dialect]
+2015-07-17 16:16:30,018 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [MySQL5InnoDB] -> [org.hibernate.dialect.MySQL5InnoDBDialect]
+2015-07-17 16:16:30,018 DEBUG org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [MySQL5] -> [org.hibernate.dialect.MySQL5Dialect] (replacing [org.hibernate.dialect.MySQL5Dialect])
+2015-07-17 16:16:30,019 DEBUG org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [MySQL5InnoDB] -> [org.hibernate.dialect.MySQL5InnoDBDialect] (replacing [org.hibernate.dialect.MySQL5InnoDBDialect])
+2015-07-17 16:16:30,020 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [Oracle8i] -> [org.hibernate.dialect.Oracle8iDialect]
+2015-07-17 16:16:30,023 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [Oracle9i] -> [org.hibernate.dialect.Oracle9iDialect]
+2015-07-17 16:16:30,024 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [Oracle10g] -> [org.hibernate.dialect.Oracle10gDialect]
+2015-07-17 16:16:30,025 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [Pointbase] -> [org.hibernate.dialect.PointbaseDialect]
+2015-07-17 16:16:30,028 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [PostgresPlus] -> [org.hibernate.dialect.PostgresPlusDialect]
+2015-07-17 16:16:30,029 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [PostgreSQL81] -> [org.hibernate.dialect.PostgreSQL81Dialect]
+2015-07-17 16:16:30,029 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [PostgreSQL82] -> [org.hibernate.dialect.PostgreSQL82Dialect]
+2015-07-17 16:16:30,030 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [PostgreSQL9] -> [org.hibernate.dialect.PostgreSQL9Dialect]
+2015-07-17 16:16:30,031 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [Progress] -> [org.hibernate.dialect.ProgressDialect]
+2015-07-17 16:16:30,032 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [SAPDB] -> [org.hibernate.dialect.SAPDBDialect]
+2015-07-17 16:16:30,037 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [SQLServer] -> [org.hibernate.dialect.SQLServerDialect]
+2015-07-17 16:16:30,038 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [SQLServer2005] -> [org.hibernate.dialect.SQLServer2005Dialect]
+2015-07-17 16:16:30,040 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [SQLServer2008] -> [org.hibernate.dialect.SQLServer2008Dialect]
+2015-07-17 16:16:30,042 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [Sybase11] -> [org.hibernate.dialect.Sybase11Dialect]
+2015-07-17 16:16:30,043 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [SybaseAnywhere] -> [org.hibernate.dialect.SybaseAnywhereDialect]
+2015-07-17 16:16:30,046 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [SybaseASE15] -> [org.hibernate.dialect.SybaseASE15Dialect]
+2015-07-17 16:16:30,046 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [SybaseASE157] -> [org.hibernate.dialect.SybaseASE157Dialect]
+2015-07-17 16:16:30,049 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [Teradata] -> [org.hibernate.dialect.TeradataDialect]
+2015-07-17 16:16:30,050 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.dialect.Dialect] : [TimesTen] -> [org.hibernate.dialect.TimesTenDialect]
+2015-07-17 16:16:30,053 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [Borland] -> [org.hibernate.engine.transaction.jta.platform.internal.BorlandEnterpriseServerJtaPlatform]
+2015-07-17 16:16:30,053 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [org.hibernate.service.jta.platform.internal.BorlandEnterpriseServerJtaPlatform] -> [org.hibernate.engine.transaction.jta.platform.internal.BorlandEnterpriseServerJtaPlatform]
+2015-07-17 16:16:30,054 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [Bitronix] -> [org.hibernate.engine.transaction.jta.platform.internal.BitronixJtaPlatform]
+2015-07-17 16:16:30,054 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [org.hibernate.service.jta.platform.internal.BitronixJtaPlatform] -> [org.hibernate.engine.transaction.jta.platform.internal.BitronixJtaPlatform]
+2015-07-17 16:16:30,104 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [JBossAS] -> [org.hibernate.engine.transaction.jta.platform.internal.JBossAppServerJtaPlatform]
+2015-07-17 16:16:30,104 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform] -> [org.hibernate.engine.transaction.jta.platform.internal.JBossAppServerJtaPlatform]
+2015-07-17 16:16:30,112 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [JBossTS] -> [org.hibernate.engine.transaction.jta.platform.internal.JBossStandAloneJtaPlatform]
+2015-07-17 16:16:30,113 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [org.hibernate.service.jta.platform.internal.JBossStandAloneJtaPlatform] -> [org.hibernate.engine.transaction.jta.platform.internal.JBossStandAloneJtaPlatform]
+2015-07-17 16:16:30,115 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [JOnAS] -> [org.hibernate.engine.transaction.jta.platform.internal.JOnASJtaPlatform]
+2015-07-17 16:16:30,115 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [org.hibernate.service.jta.platform.internal.JOnASJtaPlatform] -> [org.hibernate.engine.transaction.jta.platform.internal.JOnASJtaPlatform]
+2015-07-17 16:16:30,117 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [JOTM] -> [org.hibernate.engine.transaction.jta.platform.internal.JOTMJtaPlatform]
+2015-07-17 16:16:30,118 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [org.hibernate.service.jta.platform.internal.JOTMJtaPlatform] -> [org.hibernate.engine.transaction.jta.platform.internal.JOTMJtaPlatform]
+2015-07-17 16:16:30,120 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [JRun4] -> [org.hibernate.engine.transaction.jta.platform.internal.JRun4JtaPlatform]
+2015-07-17 16:16:30,121 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [org.hibernate.service.jta.platform.internal.JRun4JtaPlatform] -> [org.hibernate.engine.transaction.jta.platform.internal.JRun4JtaPlatform]
+2015-07-17 16:16:30,122 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [OC4J] -> [org.hibernate.engine.transaction.jta.platform.internal.OC4JJtaPlatform]
+2015-07-17 16:16:30,122 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [org.hibernate.service.jta.platform.internal.OC4JJtaPlatform] -> [org.hibernate.engine.transaction.jta.platform.internal.OC4JJtaPlatform]
+2015-07-17 16:16:30,123 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [Orion] -> [org.hibernate.engine.transaction.jta.platform.internal.OrionJtaPlatform]
+2015-07-17 16:16:30,124 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [org.hibernate.service.jta.platform.internal.OrionJtaPlatform] -> [org.hibernate.engine.transaction.jta.platform.internal.OrionJtaPlatform]
+2015-07-17 16:16:30,125 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [Resin] -> [org.hibernate.engine.transaction.jta.platform.internal.ResinJtaPlatform]
+2015-07-17 16:16:30,125 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [org.hibernate.service.jta.platform.internal.ResinJtaPlatform] -> [org.hibernate.engine.transaction.jta.platform.internal.ResinJtaPlatform]
+2015-07-17 16:16:30,126 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [SunOne] -> [org.hibernate.engine.transaction.jta.platform.internal.SunOneJtaPlatform]
+2015-07-17 16:16:30,126 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [org.hibernate.service.jta.platform.internal.SunOneJtaPlatform] -> [org.hibernate.engine.transaction.jta.platform.internal.SunOneJtaPlatform]
+2015-07-17 16:16:30,127 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [Weblogic] -> [org.hibernate.engine.transaction.jta.platform.internal.WeblogicJtaPlatform]
+2015-07-17 16:16:30,128 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [org.hibernate.service.jta.platform.internal.WeblogicJtaPlatform] -> [org.hibernate.engine.transaction.jta.platform.internal.WeblogicJtaPlatform]
+2015-07-17 16:16:30,129 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [WebSphere] -> [org.hibernate.engine.transaction.jta.platform.internal.WebSphereJtaPlatform]
+2015-07-17 16:16:30,129 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [org.hibernate.service.jta.platform.internal.WebSphereJtaPlatform] -> [org.hibernate.engine.transaction.jta.platform.internal.WebSphereJtaPlatform]
+2015-07-17 16:16:30,130 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [WebSphereExtended] -> [org.hibernate.engine.transaction.jta.platform.internal.WebSphereExtendedJtaPlatform]
+2015-07-17 16:16:30,130 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform] : [org.hibernate.service.jta.platform.internal.WebSphereExtendedJtaPlatform] -> [org.hibernate.engine.transaction.jta.platform.internal.WebSphereExtendedJtaPlatform]
+2015-07-17 16:16:30,142 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.spi.TransactionFactory] : [jdbc] -> [org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory]
+2015-07-17 16:16:30,142 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.spi.TransactionFactory] : [org.hibernate.transaction.JDBCTransactionFactory] -> [org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory]
+2015-07-17 16:16:30,147 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.spi.TransactionFactory] : [jta] -> [org.hibernate.engine.transaction.internal.jta.JtaTransactionFactory]
+2015-07-17 16:16:30,147 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.spi.TransactionFactory] : [org.hibernate.transaction.JTATransactionFactory] -> [org.hibernate.engine.transaction.internal.jta.JtaTransactionFactory]
+2015-07-17 16:16:30,149 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.spi.TransactionFactory] : [cmt] -> [org.hibernate.engine.transaction.internal.jta.CMTTransactionFactory]
+2015-07-17 16:16:30,150 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.engine.transaction.spi.TransactionFactory] : [org.hibernate.transaction.CMTTransactionFactory] -> [org.hibernate.engine.transaction.internal.jta.CMTTransactionFactory]
+2015-07-17 16:16:30,153 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.hql.spi.MultiTableBulkIdStrategy] : [persistent] -> [org.hibernate.hql.spi.PersistentTableBulkIdStrategy]
+2015-07-17 16:16:30,155 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.hql.spi.MultiTableBulkIdStrategy] : [temporary] -> [org.hibernate.hql.spi.TemporaryTableBulkIdStrategy]
+2015-07-17 16:16:30,193 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.event.spi.EntityCopyObserver] : [disallow] -> [org.hibernate.event.internal.EntityCopyNotAllowedObserver]
+2015-07-17 16:16:30,235 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.event.spi.EntityCopyObserver] : [allow] -> [org.hibernate.event.internal.EntityCopyAllowedObserver]
+2015-07-17 16:16:30,238 TRACE org.hibernate.boot.registry.selector.internal.StrategySelectorImpl (main:[]) Registering named strategy selector [org.hibernate.event.spi.EntityCopyObserver] : [log] -> [org.hibernate.event.internal.EntityCopyAllowedLoggedObserver]
+2015-07-17 16:16:32,032 TRACE org.hibernate.engine.jdbc.cursor.internal.StandardRefCursorSupport (main:[]) JDBC DatabaseMetaData class does not define supportsRefCursors method...
+2015-07-17 16:16:32,321 TRACE org.hibernate.cfg.Configuration (main:[]) Starting secondPassCompile() processing
+2015-07-17 16:16:32,391 DEBUG org.hibernate.cfg.Configuration$MetadataSourceQueue (main:[]) Processing hbm.xml files
+2015-07-17 16:16:32,499 DEBUG org.hibernate.cfg.Configuration$MetadataSourceQueue (main:[]) Process annotated classes
+2015-07-17 16:16:32,502 DEBUG org.hibernate.cfg.Configuration (main:[]) Processing fk mappings (*ToOne and JoinedSubclass)
+2015-07-17 16:16:32,504 DEBUG org.hibernate.cfg.Configuration (main:[]) Processing extends queue
+2015-07-17 16:16:32,505 DEBUG org.hibernate.cfg.Configuration (main:[]) Processing extends queue
+2015-07-17 16:16:32,505 DEBUG org.hibernate.cfg.Configuration (main:[]) Processing collection mappings
+2015-07-17 16:16:32,505 DEBUG org.hibernate.cfg.Configuration (main:[]) Processing native query and ResultSetMapping mappings
+2015-07-17 16:16:32,535 DEBUG org.hibernate.cfg.Configuration (main:[]) Processing association property references
+2015-07-17 16:16:32,535 DEBUG org.hibernate.cfg.Configuration (main:[]) Creating tables' unique integer identifiers
+2015-07-17 16:16:32,536 DEBUG org.hibernate.cfg.Configuration (main:[]) Processing foreign key constraints
+2015-07-17 16:16:32,738 DEBUG org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator (main:[]) No JtaPlatform was specified, checking resolver
+2015-07-17 16:16:32,902 INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator (main:[]) HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-07-17 16:16:32,943 DEBUG org.hibernate.cfg.SettingsFactory (main:[]) Using BatchFetchStyle : LEGACY
+2015-07-17 16:16:32,947 INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory (main:[]) HHH000397: Using ASTQueryTranslatorFactory
+2015-07-17 16:16:33,001 DEBUG org.hibernate.internal.SessionFactoryImpl (main:[]) Building session factory
+2015-07-17 16:16:33,103 DEBUG org.hibernate.cfg.beanvalidation.TypeSafeActivator (main:[]) Unable to acquire Bean Validation ValidatorFactory, skipping activation
+2015-07-17 16:16:33,103 DEBUG org.hibernate.secure.spi.JaccIntegrator (main:[]) Skipping JACC integration as it was not enabled
+2015-07-17 16:16:33,689 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@33676886
+2015-07-17 16:16:33,714 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@59ab51b0
+2015-07-17 16:16:33,718 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictid
+2015-07-17 16:16:33,719 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : groupid
+2015-07-17 16:16:33,720 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@59ab51b0
+2015-07-17 16:16:33,720 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictname
+2015-07-17 16:16:33,720 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : sortorder
+2015-07-17 16:16:33,721 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : status
+2015-07-17 16:16:33,722 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : statusdate
+2015-07-17 16:16:33,722 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : description
+2015-07-17 16:16:33,723 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@33676886
+2015-07-17 16:16:33,724 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,768 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,780 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@77fd8595
+2015-07-17 16:16:33,781 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@254d36be
+2015-07-17 16:16:33,781 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictid
+2015-07-17 16:16:33,781 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : groupid
+2015-07-17 16:16:33,781 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@254d36be
+2015-07-17 16:16:33,782 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictname
+2015-07-17 16:16:33,782 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : sortorder
+2015-07-17 16:16:33,782 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : status
+2015-07-17 16:16:33,782 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : statusdate
+2015-07-17 16:16:33,783 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : description
+2015-07-17 16:16:33,783 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@77fd8595
+2015-07-17 16:16:33,784 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,784 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,785 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@70450713
+2015-07-17 16:16:33,785 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@43d3a9fa
+2015-07-17 16:16:33,785 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictid
+2015-07-17 16:16:33,785 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : groupid
+2015-07-17 16:16:33,786 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@43d3a9fa
+2015-07-17 16:16:33,786 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictname
+2015-07-17 16:16:33,786 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : sortorder
+2015-07-17 16:16:33,786 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : status
+2015-07-17 16:16:33,787 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : statusdate
+2015-07-17 16:16:33,787 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : description
+2015-07-17 16:16:33,787 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@70450713
+2015-07-17 16:16:33,787 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,788 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,789 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@7d3c7edf
+2015-07-17 16:16:33,789 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@eada2b5
+2015-07-17 16:16:33,789 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictid
+2015-07-17 16:16:33,790 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : groupid
+2015-07-17 16:16:33,790 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@eada2b5
+2015-07-17 16:16:33,791 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictname
+2015-07-17 16:16:33,791 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : sortorder
+2015-07-17 16:16:33,791 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : status
+2015-07-17 16:16:33,791 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : statusdate
+2015-07-17 16:16:33,792 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : description
+2015-07-17 16:16:33,793 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@7d3c7edf
+2015-07-17 16:16:33,793 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,794 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,794 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@2995209a
+2015-07-17 16:16:33,794 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@7d8f73c9
+2015-07-17 16:16:33,795 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictid
+2015-07-17 16:16:33,795 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : groupid
+2015-07-17 16:16:33,796 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@7d8f73c9
+2015-07-17 16:16:33,796 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictname
+2015-07-17 16:16:33,796 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : sortorder
+2015-07-17 16:16:33,796 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : status
+2015-07-17 16:16:33,797 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : statusdate
+2015-07-17 16:16:33,797 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : description
+2015-07-17 16:16:33,797 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@2995209a
+2015-07-17 16:16:33,797 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,798 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,798 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@54fad185
+2015-07-17 16:16:33,799 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@1ed19e59
+2015-07-17 16:16:33,799 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictid
+2015-07-17 16:16:33,799 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : groupid
+2015-07-17 16:16:33,800 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@1ed19e59
+2015-07-17 16:16:33,800 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictname
+2015-07-17 16:16:33,800 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : sortorder
+2015-07-17 16:16:33,800 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : status
+2015-07-17 16:16:33,801 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : statusdate
+2015-07-17 16:16:33,801 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : description
+2015-07-17 16:16:33,801 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@54fad185
+2015-07-17 16:16:33,802 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,802 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,803 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@53f2f4dd
+2015-07-17 16:16:33,803 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@73aa0439
+2015-07-17 16:16:33,804 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictid
+2015-07-17 16:16:33,804 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : groupid
+2015-07-17 16:16:33,804 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@73aa0439
+2015-07-17 16:16:33,804 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictname
+2015-07-17 16:16:33,805 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : sortorder
+2015-07-17 16:16:33,805 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : status
+2015-07-17 16:16:33,805 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : statusdate
+2015-07-17 16:16:33,805 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : description
+2015-07-17 16:16:33,806 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@53f2f4dd
+2015-07-17 16:16:33,806 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,808 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,809 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@1efb7582
+2015-07-17 16:16:33,809 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@edfb9b2
+2015-07-17 16:16:33,810 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictid
+2015-07-17 16:16:33,810 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : groupid
+2015-07-17 16:16:33,811 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@edfb9b2
+2015-07-17 16:16:33,811 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictname
+2015-07-17 16:16:33,814 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : sortorder
+2015-07-17 16:16:33,814 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : status
+2015-07-17 16:16:33,814 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : statusdate
+2015-07-17 16:16:33,814 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : description
+2015-07-17 16:16:33,815 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@1efb7582
+2015-07-17 16:16:33,815 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,815 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,816 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@2185cbf
+2015-07-17 16:16:33,816 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@d7100ac
+2015-07-17 16:16:33,816 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictid
+2015-07-17 16:16:33,817 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : groupid
+2015-07-17 16:16:33,817 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@d7100ac
+2015-07-17 16:16:33,817 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictname
+2015-07-17 16:16:33,817 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : sortorder
+2015-07-17 16:16:33,818 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : status
+2015-07-17 16:16:33,818 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : statusdate
+2015-07-17 16:16:33,818 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : description
+2015-07-17 16:16:33,818 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@2185cbf
+2015-07-17 16:16:33,819 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,819 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,819 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@75e32318
+2015-07-17 16:16:33,820 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@1315391f
+2015-07-17 16:16:33,820 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictid
+2015-07-17 16:16:33,820 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : groupid
+2015-07-17 16:16:33,820 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@1315391f
+2015-07-17 16:16:33,821 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictname
+2015-07-17 16:16:33,821 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : sortorder
+2015-07-17 16:16:33,821 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : status
+2015-07-17 16:16:33,821 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : statusdate
+2015-07-17 16:16:33,822 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : description
+2015-07-17 16:16:33,822 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@75e32318
+2015-07-17 16:16:33,822 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,823 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,824 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@56592c02
+2015-07-17 16:16:33,824 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@78586397
+2015-07-17 16:16:33,825 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictid
+2015-07-17 16:16:33,825 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : groupid
+2015-07-17 16:16:33,826 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.NonEncapsulatedEntityIdentifierDescription@78586397
+2015-07-17 16:16:33,827 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : dictname
+2015-07-17 16:16:33,827 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : sortorder
+2015-07-17 16:16:33,828 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : status
+2015-07-17 16:16:33,828 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : statusdate
+2015-07-17 16:16:33,829 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : description
+2015-07-17 16:16:33,829 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@56592c02
+2015-07-17 16:16:33,829 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,830 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,865 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@6d0f2ab8
+2015-07-17 16:16:33,865 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyid
+2015-07-17 16:16:33,865 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empname
+2015-07-17 16:16:33,866 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,866 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,866 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,866 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@6d0f2ab8
+2015-07-17 16:16:33,867 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,868 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,868 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@5001ac39
+2015-07-17 16:16:33,869 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyid
+2015-07-17 16:16:33,869 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empname
+2015-07-17 16:16:33,869 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,869 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,869 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,870 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@5001ac39
+2015-07-17 16:16:33,870 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,871 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,871 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@1dd1fb38
+2015-07-17 16:16:33,871 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyid
+2015-07-17 16:16:33,871 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empname
+2015-07-17 16:16:33,872 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,873 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,874 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,874 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@1dd1fb38
+2015-07-17 16:16:33,874 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,875 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,876 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@44c428d3
+2015-07-17 16:16:33,876 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyid
+2015-07-17 16:16:33,876 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empname
+2015-07-17 16:16:33,877 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,877 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,877 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,878 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@44c428d3
+2015-07-17 16:16:33,878 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,879 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,879 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@2a5457ea
+2015-07-17 16:16:33,879 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyid
+2015-07-17 16:16:33,880 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empname
+2015-07-17 16:16:33,880 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,880 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,880 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,880 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@2a5457ea
+2015-07-17 16:16:33,881 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,881 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,881 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@757d95c
+2015-07-17 16:16:33,882 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyid
+2015-07-17 16:16:33,882 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empname
+2015-07-17 16:16:33,883 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,883 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,883 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,883 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@757d95c
+2015-07-17 16:16:33,884 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,884 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,884 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@187f2ac8
+2015-07-17 16:16:33,885 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyid
+2015-07-17 16:16:33,885 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empname
+2015-07-17 16:16:33,885 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,886 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,886 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,886 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@187f2ac8
+2015-07-17 16:16:33,886 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,887 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,887 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@44d1bd08
+2015-07-17 16:16:33,887 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyid
+2015-07-17 16:16:33,888 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empname
+2015-07-17 16:16:33,888 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,888 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,888 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,888 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@44d1bd08
+2015-07-17 16:16:33,889 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,889 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,889 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@25d17b84
+2015-07-17 16:16:33,890 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyid
+2015-07-17 16:16:33,890 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empname
+2015-07-17 16:16:33,890 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,890 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,890 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,891 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@25d17b84
+2015-07-17 16:16:33,891 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,891 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,892 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@5c042a81
+2015-07-17 16:16:33,892 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyid
+2015-07-17 16:16:33,892 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empname
+2015-07-17 16:16:33,892 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,893 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,893 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,893 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@5c042a81
+2015-07-17 16:16:33,893 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,894 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,894 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@1582aa59
+2015-07-17 16:16:33,894 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyid
+2015-07-17 16:16:33,894 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empname
+2015-07-17 16:16:33,895 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,895 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,895 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,895 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@1582aa59
+2015-07-17 16:16:33,896 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,896 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,897 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@357dc417
+2015-07-17 16:16:33,898 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,898 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,898 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,899 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : capital
+2015-07-17 16:16:33,899 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : createdate
+2015-07-17 16:16:33,899 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,899 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,900 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : state
+2015-07-17 16:16:33,900 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@357dc417
+2015-07-17 16:16:33,900 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,900 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,901 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@53d4dd70
+2015-07-17 16:16:33,901 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,901 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,901 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,902 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : capital
+2015-07-17 16:16:33,902 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : createdate
+2015-07-17 16:16:33,902 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,902 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,902 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : state
+2015-07-17 16:16:33,903 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@53d4dd70
+2015-07-17 16:16:33,903 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,903 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,904 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@3c160f0f
+2015-07-17 16:16:33,904 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,904 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,904 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,904 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : capital
+2015-07-17 16:16:33,905 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : createdate
+2015-07-17 16:16:33,905 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,905 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,905 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : state
+2015-07-17 16:16:33,905 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@3c160f0f
+2015-07-17 16:16:33,906 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,906 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,906 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@4c36c09a
+2015-07-17 16:16:33,907 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,907 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,907 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,907 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : capital
+2015-07-17 16:16:33,907 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : createdate
+2015-07-17 16:16:33,908 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,908 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,908 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : state
+2015-07-17 16:16:33,908 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@4c36c09a
+2015-07-17 16:16:33,909 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,909 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,909 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@1e9ee58d
+2015-07-17 16:16:33,909 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,910 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,910 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,910 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : capital
+2015-07-17 16:16:33,910 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : createdate
+2015-07-17 16:16:33,910 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,911 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,911 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : state
+2015-07-17 16:16:33,911 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@1e9ee58d
+2015-07-17 16:16:33,911 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,912 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,912 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@51f09baf
+2015-07-17 16:16:33,913 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,913 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,913 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,913 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : capital
+2015-07-17 16:16:33,913 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : createdate
+2015-07-17 16:16:33,914 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,914 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,914 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : state
+2015-07-17 16:16:33,914 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@51f09baf
+2015-07-17 16:16:33,915 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,915 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,915 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@b7d2830
+2015-07-17 16:16:33,916 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,916 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,916 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,916 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : capital
+2015-07-17 16:16:33,916 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : createdate
+2015-07-17 16:16:33,917 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,917 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,917 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : state
+2015-07-17 16:16:33,917 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@b7d2830
+2015-07-17 16:16:33,917 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,918 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,918 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@45d96d34
+2015-07-17 16:16:33,918 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,919 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,919 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,919 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : capital
+2015-07-17 16:16:33,919 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : createdate
+2015-07-17 16:16:33,919 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,920 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,920 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : state
+2015-07-17 16:16:33,920 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@45d96d34
+2015-07-17 16:16:33,920 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,921 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,921 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@1715ab47
+2015-07-17 16:16:33,921 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,921 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,922 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,922 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : capital
+2015-07-17 16:16:33,922 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : createdate
+2015-07-17 16:16:33,922 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,923 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,923 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : state
+2015-07-17 16:16:33,923 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@1715ab47
+2015-07-17 16:16:33,923 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,924 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,924 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@f9fce28
+2015-07-17 16:16:33,924 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,924 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,925 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,925 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : capital
+2015-07-17 16:16:33,925 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : createdate
+2015-07-17 16:16:33,925 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,925 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,926 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : state
+2015-07-17 16:16:33,926 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@f9fce28
+2015-07-17 16:16:33,926 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,926 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,927 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@4497ac1b
+2015-07-17 16:16:33,927 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,927 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,927 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : address
+2015-07-17 16:16:33,928 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : capital
+2015-07-17 16:16:33,928 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : createdate
+2015-07-17 16:16:33,928 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : bank
+2015-07-17 16:16:33,928 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : account
+2015-07-17 16:16:33,928 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : state
+2015-07-17 16:16:33,929 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@4497ac1b
+2015-07-17 16:16:33,929 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,929 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,931 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@41a443cb
+2015-07-17 16:16:33,931 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,931 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,932 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empNumber
+2015-07-17 16:16:33,932 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@41a443cb
+2015-07-17 16:16:33,932 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,933 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,934 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@75ee618
+2015-07-17 16:16:33,934 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,934 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,935 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empNumber
+2015-07-17 16:16:33,935 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@75ee618
+2015-07-17 16:16:33,935 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,936 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,936 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@6754356f
+2015-07-17 16:16:33,936 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,937 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,937 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empNumber
+2015-07-17 16:16:33,937 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@6754356f
+2015-07-17 16:16:33,937 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,938 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,938 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@49803f68
+2015-07-17 16:16:33,938 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,939 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,939 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empNumber
+2015-07-17 16:16:33,939 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@49803f68
+2015-07-17 16:16:33,939 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,940 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,940 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@2c2ea8b
+2015-07-17 16:16:33,940 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,940 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,941 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empNumber
+2015-07-17 16:16:33,941 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@2c2ea8b
+2015-07-17 16:16:33,941 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,944 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,944 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@4ab44d17
+2015-07-17 16:16:33,945 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,945 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,945 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empNumber
+2015-07-17 16:16:33,946 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@4ab44d17
+2015-07-17 16:16:33,946 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,946 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,947 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@3314752
+2015-07-17 16:16:33,947 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,947 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,947 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empNumber
+2015-07-17 16:16:33,948 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@3314752
+2015-07-17 16:16:33,948 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,948 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,948 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@18415a21
+2015-07-17 16:16:33,949 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,949 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,949 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empNumber
+2015-07-17 16:16:33,949 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@18415a21
+2015-07-17 16:16:33,950 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,950 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,950 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@6a8438f7
+2015-07-17 16:16:33,951 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,951 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,951 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empNumber
+2015-07-17 16:16:33,951 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@6a8438f7
+2015-07-17 16:16:33,952 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,952 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,952 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@eb816c3
+2015-07-17 16:16:33,952 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,953 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,953 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empNumber
+2015-07-17 16:16:33,953 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@eb816c3
+2015-07-17 16:16:33,953 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,954 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:33,954 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@57de63c1
+2015-07-17 16:16:33,954 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : companyname
+2015-07-17 16:16:33,954 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : shortname
+2015-07-17 16:16:33,955 DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker (main:[]) Visiting attribute path : empNumber
+2015-07-17 16:16:33,955 TRACE org.hibernate.loader.plan.build.internal.AbstractLoadPlanBuildingAssociationVisitationStrategy (main:[]) Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@57de63c1
+2015-07-17 16:16:33,955 DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (main:[]) Building LoadPlan...
+2015-07-17 16:16:33,956 DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor (main:[]) processing queryspace <gen:0>
+2015-07-17 16:16:34,148 DEBUG org.hibernate.internal.SessionFactoryRegistry (main:[]) Not binding SessionFactory to JNDI, no JNDI name configured
+2015-07-17 16:16:34,149 DEBUG org.hibernate.internal.SessionFactoryImpl (main:[]) Instantiated session factory
+2015-07-17 16:16:34,210 INFO org.hibernate.tool.hbm2ddl.SchemaUpdate (main:[]) HHH000228: Running hbm2ddl schema update
+2015-07-17 16:16:34,210 INFO org.hibernate.tool.hbm2ddl.SchemaUpdate (main:[]) HHH000102: Fetching database metadata
+2015-07-17 16:16:34,215 INFO org.hibernate.tool.hbm2ddl.SchemaUpdate (main:[]) HHH000396: Updating schema
+2015-07-17 16:16:34,215 TRACE org.hibernate.cfg.Configuration (main:[]) Starting secondPassCompile() processing
+2015-07-17 16:16:34,216 DEBUG org.hibernate.cfg.Configuration$MetadataSourceQueue (main:[]) Processing hbm.xml files
+2015-07-17 16:16:34,216 DEBUG org.hibernate.cfg.Configuration$MetadataSourceQueue (main:[]) Process annotated classes
+2015-07-17 16:16:34,216 DEBUG org.hibernate.cfg.Configuration (main:[]) Processing fk mappings (*ToOne and JoinedSubclass)
+2015-07-17 16:16:34,216 DEBUG org.hibernate.cfg.Configuration (main:[]) Processing extends queue
+2015-07-17 16:16:34,216 DEBUG org.hibernate.cfg.Configuration (main:[]) Processing extends queue
+2015-07-17 16:16:34,217 DEBUG org.hibernate.cfg.Configuration (main:[]) Processing collection mappings
+2015-07-17 16:16:34,217 DEBUG org.hibernate.cfg.Configuration (main:[]) Processing native query and ResultSetMapping mappings
+2015-07-17 16:16:34,217 DEBUG org.hibernate.cfg.Configuration (main:[]) Processing association property references
+2015-07-17 16:16:34,217 DEBUG org.hibernate.cfg.Configuration (main:[]) Creating tables' unique integer identifiers
+2015-07-17 16:16:34,217 DEBUG org.hibernate.cfg.Configuration (main:[]) Processing foreign key constraints
+2015-07-17 16:16:34,301 INFO org.hibernate.tool.hbm2ddl.SchemaUpdate (main:[]) HHH000232: Schema update complete
+2015-07-17 16:16:35,347 INFO com.alibaba.dubbo.config.spring.ServiceBean (main:[])  [DUBBO] The service ready on spring started. service: com.nbf.exam.service.ExampleService, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:35,655 INFO com.alibaba.dubbo.config.ServiceConfig (main:[])  [DUBBO] Export dubbo service com.nbf.exam.service.ExampleService to local registry, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:35,655 INFO com.alibaba.dubbo.config.ServiceConfig (main:[])  [DUBBO] Export dubbo service com.nbf.exam.service.ExampleService to url dubbo://172.20.42.190:21000/com.nbf.exam.service.ExampleService?anyhost=true&application=nbf-example-srv-app&dubbo=2.8.3&generic=false&interface=com.nbf.exam.service.ExampleService&methods=findByPk,manager,query,sayHello&owner=nbf&pid=9288&side=provider&timestamp=1437120995393, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:35,683 INFO com.alibaba.dubbo.config.ServiceConfig (main:[])  [DUBBO] Register dubbo service com.nbf.exam.service.ExampleService url dubbo://172.20.42.190:21000/com.nbf.exam.service.ExampleService?anyhost=true&application=nbf-example-srv-app&dubbo=2.8.3&generic=false&interface=com.nbf.exam.service.ExampleService&methods=findByPk,manager,query,sayHello&monitor=dubbo%3A%2F%2F224.5.6.7%3A1234%2Fcom.alibaba.dubbo.registry.RegistryService%3Fapplication%3Dnbf-example-srv-app%26dubbo%3D2.8.3%26owner%3Dnbf%26pid%3D9288%26protocol%3Dregistry%26refer%3Ddubbo%253D2.8.3%2526interface%253Dcom.alibaba.dubbo.monitor.MonitorService%2526pid%253D9288%2526timestamp%253D1437120995656%26registry%3Dmulticast%26timestamp%3D1437120995360&owner=nbf&pid=9288&side=provider&timestamp=1437120995393 to registry registry://224.5.6.7:1234/com.alibaba.dubbo.registry.RegistryService?application=nbf-example-srv-app&dubbo=2.8.3&owner=nbf&pid=9288&registry=multicast&timestamp=1437120995360, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:36,415 INFO com.alibaba.dubbo.remoting.transport.AbstractServer (main:[])  [DUBBO] Start NettyServer bind /0.0.0.0:21000, export /172.20.42.190:21000, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:36,423 INFO com.alibaba.dubbo.registry.support.AbstractRegistry (main:[])  [DUBBO] Load registry store file D:\My Documents\.dubbo\dubbo-registry-224.5.6.7.cache, data: {com.nbf.exam.service.ExampleService=dubbo://192.168.1.101:21000/com.nbf.exam.service.ExampleService?anyhost=true&application=nbf-example-srv-app&dubbo=2.8.3&generic=false&interface=com.nbf.exam.service.ExampleService&methods=findByPk,manager,query,sayHello&owner=nbf&pid=6004&side=provider&timestamp=1428029121051, com.jambo.jop.infrastructure.component.Code2NameService=dubbo://172.20.42.190:21000/com.jambo.jop.infrastructure.component.Code2NameService?anyhost=true&application=nbf-example-srv-app&dubbo=2.8.3&generic=false&interface=com.jambo.jop.infrastructure.component.Code2NameService&methods=valueListPackage,code2Name,valueList&owner=nbf&pid=6024&side=provider&timestamp=1437102595046}, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:36,469 INFO com.alibaba.dubbo.registry.support.AbstractRegistry (main:[])  [DUBBO] Register: dubbo://172.20.42.190:21000/com.nbf.exam.service.ExampleService?anyhost=true&application=nbf-example-srv-app&dubbo=2.8.3&generic=false&interface=com.nbf.exam.service.ExampleService&methods=findByPk,manager,query,sayHello&owner=nbf&pid=9288&side=provider&timestamp=1437120995393, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:36,475 INFO com.alibaba.dubbo.registry.multicast.MulticastRegistry (main:[])  [DUBBO] Send broadcast message: register dubbo://172.20.42.190:21000/com.nbf.exam.service.ExampleService?anyhost=true&application=nbf-example-srv-app&dubbo=2.8.3&generic=false&interface=com.nbf.exam.service.ExampleService&methods=findByPk,manager,query,sayHello&owner=nbf&pid=9288&side=provider&timestamp=1437120995393 to /224.5.6.7:1234, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:36,475 INFO com.alibaba.dubbo.registry.multicast.MulticastRegistry (DubboMulticastRegistryReceiver:[])  [DUBBO] Receive multicast message: register dubbo://172.20.42.190:21000/com.nbf.exam.service.ExampleService?anyhost=true&application=nbf-example-srv-app&dubbo=2.8.3&generic=false&interface=com.nbf.exam.service.ExampleService&methods=findByPk,manager,query,sayHello&owner=nbf&pid=9288&side=provider&timestamp=1437120995393 from /172.20.42.190:1234, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:36,477 INFO com.alibaba.dubbo.registry.support.AbstractRegistry (main:[])  [DUBBO] Subscribe: provider://172.20.42.190:21000/com.nbf.exam.service.ExampleService?anyhost=true&application=nbf-example-srv-app&category=configurators&check=false&dubbo=2.8.3&generic=false&interface=com.nbf.exam.service.ExampleService&methods=findByPk,manager,query,sayHello&owner=nbf&pid=9288&side=provider&timestamp=1437120995393, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:36,477 INFO com.alibaba.dubbo.registry.multicast.MulticastRegistry (main:[])  [DUBBO] Send broadcast message: subscribe provider://172.20.42.190:21000/com.nbf.exam.service.ExampleService?anyhost=true&application=nbf-example-srv-app&category=configurators&check=false&dubbo=2.8.3&generic=false&interface=com.nbf.exam.service.ExampleService&methods=findByPk,manager,query,sayHello&owner=nbf&pid=9288&side=provider&timestamp=1437120995393 to /224.5.6.7:1234, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:36,477 INFO com.alibaba.dubbo.registry.multicast.MulticastRegistry (DubboMulticastRegistryReceiver:[])  [DUBBO] Receive multicast message: subscribe provider://172.20.42.190:21000/com.nbf.exam.service.ExampleService?anyhost=true&application=nbf-example-srv-app&category=configurators&check=false&dubbo=2.8.3&generic=false&interface=com.nbf.exam.service.ExampleService&methods=findByPk,manager,query,sayHello&owner=nbf&pid=9288&side=provider&timestamp=1437120995393 from /172.20.42.190:1234, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:37,478 INFO com.alibaba.dubbo.registry.support.AbstractRegistry (main:[])  [DUBBO] Notify urls for subscribe url provider://172.20.42.190:21000/com.nbf.exam.service.ExampleService?anyhost=true&application=nbf-example-srv-app&category=configurators&check=false&dubbo=2.8.3&generic=false&interface=com.nbf.exam.service.ExampleService&methods=findByPk,manager,query,sayHello&owner=nbf&pid=9288&side=provider&timestamp=1437120995393, urls: [dubbo://192.168.1.101:21000/com.nbf.exam.service.ExampleService?anyhost=true&application=nbf-example-srv-app&dubbo=2.8.3&generic=false&interface=com.nbf.exam.service.ExampleService&methods=findByPk,manager,query,sayHello&owner=nbf&pid=6004&side=provider&timestamp=1428029121051], dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:37,480 INFO com.alibaba.dubbo.config.spring.ServiceBean (main:[])  [DUBBO] The service ready on spring started. service: com.jambo.jop.infrastructure.component.Code2NameService, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:37,546 INFO com.alibaba.dubbo.config.ServiceConfig (main:[])  [DUBBO] Export dubbo service com.jambo.jop.infrastructure.component.Code2NameService to local registry, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:37,547 INFO com.alibaba.dubbo.config.ServiceConfig (main:[])  [DUBBO] Export dubbo service com.jambo.jop.infrastructure.component.Code2NameService to url dubbo://172.20.42.190:21000/com.jambo.jop.infrastructure.component.Code2NameService?anyhost=true&application=nbf-example-srv-app&dubbo=2.8.3&generic=false&interface=com.jambo.jop.infrastructure.component.Code2NameService&methods=code2Name,valueListPackage,valueList&owner=nbf&pid=9288&side=provider&timestamp=1437120997499, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:37,550 INFO com.alibaba.dubbo.config.ServiceConfig (main:[])  [DUBBO] Register dubbo service com.jambo.jop.infrastructure.component.Code2NameService url dubbo://172.20.42.190:21000/com.jambo.jop.infrastructure.component.Code2NameService?anyhost=true&application=nbf-example-srv-app&dubbo=2.8.3&generic=false&interface=com.jambo.jop.infrastructure.component.Code2NameService&methods=code2Name,valueListPackage,valueList&monitor=dubbo%3A%2F%2F224.5.6.7%3A1234%2Fcom.alibaba.dubbo.registry.RegistryService%3Fapplication%3Dnbf-example-srv-app%26dubbo%3D2.8.3%26owner%3Dnbf%26pid%3D9288%26protocol%3Dregistry%26refer%3Ddubbo%253D2.8.3%2526interface%253Dcom.alibaba.dubbo.monitor.MonitorService%2526pid%253D9288%2526timestamp%253D1437120997548%26registry%3Dmulticast%26timestamp%3D1437120997498&owner=nbf&pid=9288&side=provider&timestamp=1437120997499 to registry registry://224.5.6.7:1234/com.alibaba.dubbo.registry.RegistryService?application=nbf-example-srv-app&dubbo=2.8.3&owner=nbf&pid=9288&registry=multicast&timestamp=1437120997498, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:37,555 INFO com.alibaba.dubbo.registry.support.AbstractRegistry (main:[])  [DUBBO] Register: dubbo://172.20.42.190:21000/com.jambo.jop.infrastructure.component.Code2NameService?anyhost=true&application=nbf-example-srv-app&dubbo=2.8.3&generic=false&interface=com.jambo.jop.infrastructure.component.Code2NameService&methods=code2Name,valueListPackage,valueList&owner=nbf&pid=9288&side=provider&timestamp=1437120997499, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:37,556 INFO com.alibaba.dubbo.registry.multicast.MulticastRegistry (main:[])  [DUBBO] Send broadcast message: register dubbo://172.20.42.190:21000/com.jambo.jop.infrastructure.component.Code2NameService?anyhost=true&application=nbf-example-srv-app&dubbo=2.8.3&generic=false&interface=com.jambo.jop.infrastructure.component.Code2NameService&methods=code2Name,valueListPackage,valueList&owner=nbf&pid=9288&side=provider&timestamp=1437120997499 to /224.5.6.7:1234, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:37,556 INFO com.alibaba.dubbo.registry.multicast.MulticastRegistry (DubboMulticastRegistryReceiver:[])  [DUBBO] Receive multicast message: register dubbo://172.20.42.190:21000/com.jambo.jop.infrastructure.component.Code2NameService?anyhost=true&application=nbf-example-srv-app&dubbo=2.8.3&generic=false&interface=com.jambo.jop.infrastructure.component.Code2NameService&methods=code2Name,valueListPackage,valueList&owner=nbf&pid=9288&side=provider&timestamp=1437120997499 from /172.20.42.190:1234, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:37,557 INFO com.alibaba.dubbo.registry.support.AbstractRegistry (main:[])  [DUBBO] Subscribe: provider://172.20.42.190:21000/com.jambo.jop.infrastructure.component.Code2NameService?anyhost=true&application=nbf-example-srv-app&category=configurators&check=false&dubbo=2.8.3&generic=false&interface=com.jambo.jop.infrastructure.component.Code2NameService&methods=code2Name,valueListPackage,valueList&owner=nbf&pid=9288&side=provider&timestamp=1437120997499, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:37,557 INFO com.alibaba.dubbo.registry.multicast.MulticastRegistry (main:[])  [DUBBO] Send broadcast message: subscribe provider://172.20.42.190:21000/com.jambo.jop.infrastructure.component.Code2NameService?anyhost=true&application=nbf-example-srv-app&category=configurators&check=false&dubbo=2.8.3&generic=false&interface=com.jambo.jop.infrastructure.component.Code2NameService&methods=code2Name,valueListPackage,valueList&owner=nbf&pid=9288&side=provider&timestamp=1437120997499 to /224.5.6.7:1234, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:37,557 INFO com.alibaba.dubbo.registry.multicast.MulticastRegistry (DubboMulticastRegistryReceiver:[])  [DUBBO] Receive multicast message: subscribe provider://172.20.42.190:21000/com.jambo.jop.infrastructure.component.Code2NameService?anyhost=true&application=nbf-example-srv-app&category=configurators&check=false&dubbo=2.8.3&generic=false&interface=com.jambo.jop.infrastructure.component.Code2NameService&methods=code2Name,valueListPackage,valueList&owner=nbf&pid=9288&side=provider&timestamp=1437120997499 from /172.20.42.190:1234, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:38,558 INFO com.alibaba.dubbo.registry.support.AbstractRegistry (main:[])  [DUBBO] Notify urls for subscribe url provider://172.20.42.190:21000/com.jambo.jop.infrastructure.component.Code2NameService?anyhost=true&application=nbf-example-srv-app&category=configurators&check=false&dubbo=2.8.3&generic=false&interface=com.jambo.jop.infrastructure.component.Code2NameService&methods=code2Name,valueListPackage,valueList&owner=nbf&pid=9288&side=provider&timestamp=1437120997499, urls: [dubbo://172.20.42.190:21000/com.jambo.jop.infrastructure.component.Code2NameService?anyhost=true&application=nbf-example-srv-app&dubbo=2.8.3&generic=false&interface=com.jambo.jop.infrastructure.component.Code2NameService&methods=valueListPackage,code2Name,valueList&owner=nbf&pid=6024&side=provider&timestamp=1437102595046], dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:16:38,565 INFO com.alibaba.dubbo.container.Main (main:[])  [DUBBO] Dubbo SpringContainer started!, dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:17:28,502 INFO com.alibaba.dubbo.remoting.transport.netty.NettyChannel (DubboServerHandler-172.20.42.190:21000-thread-7:[])  [DUBBO] Close netty channel [id: 0x0329ca4e, /0:0:0:0:0:0:0:1:53654 => /0:0:0:0:0:0:0:1:21000], dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:17:28,503 WARN com.alibaba.dubbo.remoting.transport.AbstractServer (DubboServerHandler-172.20.42.190:21000-thread-7:[])  [DUBBO] All clients has discontected from /0:0:0:0:0:0:0:1:21000. You can graceful shutdown now., dubbo version: 2.8.3, current host: 127.0.0.1
+2015-07-17 16:17:28,504 INFO com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1 (DubboServerHandler-172.20.42.190:21000-thread-8:[])  [DUBBO] disconected from /0:0:0:0:0:0:0:1:53654,url:dubbo://172.20.42.190:21000/com.nbf.exam.service.ExampleService?anyhost=true&application=nbf-example-srv-app&channel.readonly.sent=true&codec=dubbo&dubbo=2.8.3&generic=false&heartbeat=60000&interface=com.nbf.exam.service.ExampleService&methods=findByPk,manager,query,sayHello&monitor=dubbo%3A%2F%2F224.5.6.7%3A1234%2Fcom.alibaba.dubbo.registry.RegistryService%3Fapplication%3Dnbf-example-srv-app%26dubbo%3D2.8.3%26owner%3Dnbf%26pid%3D9288%26protocol%3Dregistry%26refer%3Ddubbo%253D2.8.3%2526interface%253Dcom.alibaba.dubbo.monitor.MonitorService%2526pid%253D9288%2526timestamp%253D1437120995656%26registry%3Dmulticast%26timestamp%3D1437120995360&owner=nbf&pid=9288&side=provider&timestamp=1437120995393, dubbo version: 2.8.3, current host: 127.0.0.1

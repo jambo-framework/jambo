@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.jambo.jop.business.base.dictitem.DictitemVO" table="SA_DB_DICTITEM">
+<composite-id>
+<key-property column="DICTID" length="32" name="dictid" type="java.lang.String"/>
+<key-property column="GROUPID" length="32" name="groupid" type="java.lang.String"/>
+</composite-id>
+<property column="DICTNAME" length="64" name="dictname" type="java.lang.String"/>
+<property column="SORTORDER" length="3" name="sortorder" type="java.lang.Short"/>
+<property column="STATUS" length="1" name="status" type="java.lang.Byte"/>
+<property column="STATUSDATE" length="7" name="statusdate" type="java.util.Date"/>
+<property column="DESCRIPTION" length="128" name="description" type="java.lang.String"/>
+</class>
+</hibernate-mapping>

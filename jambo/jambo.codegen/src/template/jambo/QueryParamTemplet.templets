@@ -1,0 +1,37 @@
+/**
+ * auto-generated code
+ * $date
+ */
+$pkgName
+
+import com.jambo.jop.infrastructure.db.DBQueryParam;
+
+/**
+ * <p>Title: $className </p>;
+ * <p>Description: Query Parameter</p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: jambo-framework Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+public class $className extends DBQueryParam {
+#foreach($paramField in $helper.getParams())
+    private String $paramField;
+#end
+
+#foreach($paramField in $helper.getParams())
+	/**
+     * @return Returns the $paramField.
+     */
+    public String get$paramField() {
+        return this.$paramField;
+    }
+    /**
+     * @param The $paramField to set.
+     */
+    public void set$paramField(String $paramField) {
+        this.$paramField = $paramField;
+    }
+
+#end
+}

@@ -1,0 +1,66 @@
+/**
+ * auto-generated code
+ * $date
+ */
+$pkgName
+
+import $conpkg.$ejbInterfaceName ;
+import $conpkg.$ejbBeanName ;
+import com.sunrise.jop.infrastructure.db.DataPackage;
+#if($isListVO.booleanValue())
+import $modelPkg.$listVOClassName;
+#end
+import $modelPkg.$poClassName;
+import com.sunrise.jop.test.base.DAOTestCase;
+import com.sunrise.jop.infrastructure.control.ControlFactory;
+
+/**
+ * <p>Title: $className</p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: sunrise Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+public class $className extends DAOTestCase {
+
+    private $ejbInterfaceName control;
+
+    private static final String DATAFILE = "${pkgForder}/${ejbInterfaceName}.data.xml";
+
+    public $className() throws Exception {
+        super("$className");
+        control = ($ejbInterfaceName)ControlFactory.build(${ejbBeanName}.class,getUser());
+    }
+
+	protected void setUp() throws Exception {
+		super.setUp();
+		// TODO 测试数据准备
+	}
+
+	protected void tearDown() throws Exception {
+		super.tearDown();
+		// TODO 测试数据清除
+	}
+
+	/**
+	 * 新增，删，修改的测试合在一起比较方便
+	 */
+	public void ftestCRUD() throws Exception{
+	}
+
+    public void testDoQuery() throws Exception {
+        insertFileIntoDb(DATAFILE);
+        $listVOClassName params = new ${listVOClassName}();
+        // TODO 构造查询条件
+        try {
+            DataPackage dp = control.doQuery(params);
+            assertNotNull(dp);
+            assertNotNull(dp.getDatas());
+            // TODO 断言
+        } catch (Exception e) {
+            log.error(e.getMessage(),e);
+            fail(e.getMessage());
+        }
+    }
+}

@@ -1,0 +1,29 @@
+$pkgName
+
+import com.sunrise.boss.common.base.baseface.IForm;
+import $modelPkg.$poClassName;
+
+/**
+ * auto-generated code
+ * $date
+ */
+/**
+ * <p>Title: $className </p>;
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: sunrise Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+public class $className extends $poClassName
+    implements IForm{
+    private boolean _isSelect = false;
+    
+    public boolean is_isSelect() {
+        return _isSelect;
+    }
+
+    public void set_isSelect(boolean select) {
+        _isSelect = select;
+    }
+}

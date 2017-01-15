@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "spring-beans-2.0.dtd">
+<!-- 接口注册工具。用于注册接口的默认实现类。InterfaceUtils.createDefaultObject(接口名) 方法可以创建默认的实现类实例。以分离接口和实现。-->
+<beans>
+    <bean id="com.jambo.jop.common.utils.lang.InterfaceUtils" class="com.jambo.jop.common.utils.lang.InterfaceUtils">
+		<property name="interfaceClassMapping">
+			<props>
+                <!--<prop key="com.jambo.jop.infrastructure.component.Code2Name">com.jambo.jop.infrastructure.component.Code2NameDubboClient</prop>-->
+                <prop key="com.jambo.jop.infrastructure.component.Code2Name">com.jambo.jop.infrastructure.component.impl.DefaultCode2Name</prop>
+                <prop key="com.jambo.jop.ui.common.UserProvider">com.jambo.jop.ui.spring.SpringUserProvider</prop>
+
+                <prop key="com.jambo.jop.business.base.dictitem.IDictitemDAO">com.jambo.jop.business.base.dictitem.DictitemDAO</prop>
+                <prop key="com.jambo.jop.business.base.dictitem.IDictitemVO">com.jambo.jop.business.base.dictitem.DictitemVO</prop>
+                <!--实际项目中应该使用自己的数据字典类,参考下面的注释-->
+                <!--<prop key="com.nbfg.jop.business.base.dictitem.IDictitemDAO">com.jambo.ngcrm.business.base.dictitem.DictitemDAO</prop>-->
+                <!--<prop key="com.nbfg.jop.business.base.dictitem.IDictitemVO">com.jambo.ngcrm.business.base.dictitem.DictitemVO</prop>-->
+
+                <!--实际项目中应该使用自己的实现类-->
+                <!--<prop key="com.nbfg.jop.ui.filter.PermissionChecker">com.jambo.ngcrm.common.check.WebPermissionChecker</prop>-->
+                <!--<prop key="com.nbfg.ngcrm.control.base.opershortcut.OperShortcutTreeHelper">com.nbfg.ngcrm.control.base.opershortcut.OperShortcutTreeHelper</prop>-->
+			</props>
+		</property>
+	</bean>
+	
+	<!-- 单数据源使用	-->
+	<bean id="com.jambo.jop.infrastructure.db.SessionFactoryRouter" class="com.jambo.jop.infrastructure.db.hibernate3.Hibernate3SessionFactoryRouter">
+        <property name="multiDBMode" value="COMMON_CITY_MODE" />
+    </bean>
+
+    <!-- Web环境下使用 -->
+    <bean name="springContext" class="com.jambo.jop.common.spring.SpringContextManager"/>
+
+    <!-- 域数据源标识 -->
+    <!--<bean id="domainDBUser" class="com.jambo.mvno.system.persistent.SystemUser"/>-->
+
+</beans>

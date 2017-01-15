@@ -1,0 +1,30 @@
+/**
+ * auto-generated code
+ * $date
+ */
+$pkgName
+
+import $modelPkg.$paramClassName;
+import $modelPkg.$pojoClassName;
+import com.jambo.jop.exception.BusinessException;
+import com.jambo.jop.infrastructure.db.BaseResponse;
+import com.jambo.jop.infrastructure.db.DataPackageWrap;
+
+import java.io.Serializable;
+
+/**
+ * <p>Title: $className </p>;
+ * <p>Description: dubbo service interface</p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: jambo-framework Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+public interface $className {
+    public DataPackageWrap<$pojoClassName> query($paramClassName request) throws BusinessException;
+
+    public BaseResponse<$pojoClassName> findByPk($paramClassName request, Serializable pk) throws Exception;
+
+    public BaseResponse<$pojoClassName> manager($paramClassName request,$pojoClassName vo) throws BusinessException;
+
+}

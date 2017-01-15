@@ -1,0 +1,19 @@
+/**
+ * auto-generated code
+ * $date
+ */
+$pkgName
+
+import $modelPkg.$pojoClassName;
+
+/**
+ * <p>Title: $className </p>;
+ * <p>Description: action form class </p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: jambo-framework Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+public class $className extends $pojoClassName {
+
+}

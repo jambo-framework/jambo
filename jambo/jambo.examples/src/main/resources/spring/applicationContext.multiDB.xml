@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+		
+	<!-- 接口注册工具。用于注册接口的默认实现类。InterfaceUtils.createDefaultObject(接口名) 方法可以创建默认的实现类实例。
+		以分离接口和实现。
+	-->
+	<bean id="com.jambo.jop.common.utils.lang.InterfaceUtils" class="com.jambo.jop.common.utils.lang.InterfaceUtils">
+		<property name="interfaceClassMapping">
+			<props>
+                <prop key="com.jambo.jop.infrastructure.component.Code2Name">com.jambo.jop.infrastructure.component.impl.DefaultCode2Name</prop>
+                <prop key="com.jambo.jop.ui.common.UserProvider">com.jambo.jop.ui.struts2.Struts2UserProvider</prop>
+
+                <!--实际项目中应该使用自己的实现类-->
+                <prop key="com.jambo.jop.ui.filter.PermissionChecker">com.jambo.ngcrm.common.check.WebPermissionChecker</prop>
+
+                <!--实际项目中应该使用自己的数据字典类,参考下面的注释-->
+                <prop key="com.jambo.jop.business.base.dictitem.IDictitemDAO">com.jambo.jop.business.base.dictitem.DictitemDAO</prop>
+                <prop key="com.jambo.jop.business.base.dictitem.IDictitemVO">com.jambo.jop.business.base.dictitem.DictitemVO</prop>
+                <!--<prop key="com.jambo.jop.business.base.dictitem.IDictitemDAO">com.jambo.ngcrm.business.base.dictitem.DictitemDAO</prop>-->
+                <!--<prop key="com.jambo.jop.business.base.dictitem.IDictitemVO">com.jambo.ngcrm.business.base.dictitem.DictitemVO</prop>-->
+
+                <prop key="com.jambo.ngcrm.control.base.opershortcut.OperShortcutTreeHelper">com.jambo.ngcrm.control.base.opershortcut.OperShortcutTreeHelper</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- 多数据源使用, 需要JTA支持
+	  multiDBMode 取值: 公共+地市库模式 COMMON_CITY_MODE， 平行库模式:BROTHERS_MODE
+    -->
+	<bean id="com.jambo.jop.infrastructure.db.SessionFactoryRouter" class="com.jambo.jop.infrastructure.db.hibernate3.Hibernate3SessionFactoryRouter">
+		<property name="sessionFactoryConfig" value="data/sessionFactory.properties" />
+		<property name="defaultDataSource" value="DB_COMMON"/>		
+		<property name="multiDBMode" value="COMMON_CITY_MODE"/> 
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.transaction.jta.JtaTransactionManager">
+		<property name="userTransactionName" value="java:comp/UserTransaction"/>
+	</bean>	
+
+	<!-- 注册自动代理创建，为业务Bean添加拦截器 -->	
+	<bean id="BOAutoProxyCreator" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">	
+		<property name="proxyTargetClass" value="true"></property>
+		<property name="beanNames">
+			<list>
+				<value>*BO</value>				
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>				
+				<!-- <value>logMethodPointcutAdvisor</value>    -->
+				<value>businessLogMethodPointcutAdvisor</value>					
+				<value>trasactionMethodPointcutAdvisor</value>	<!-- 注意： 事务拦截器必须包含在业务日志拦截器中，以免事务控制混乱；或者将业务日志的方法recordLog 设置为 PROPAGATION_REQUIRES_NEW 属性 -->					
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 性能监控 -->
+	<!-- 注册通知器 advisor -->
+	<bean id="logAdvisor" class="com.jambo.jop.infrastructure.advisor.LogAdvisor"/>
+	<bean id="businessLogAdvisor" class="com.jambo.jop.common.businesslog.BusinessLogAdvisor"/>
+	
+	<bean id="transactionAdvisor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager">
+			<ref local="transactionManager"/>
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<!-- 注意开发规范：业务bean的业务方法必须为 do* 格式，才能被包含事务！ -->
+				<prop key="do*">PROPAGATION_REQUIRED</prop>				
+			</props>
+		</property>
+	</bean>
+	
+	<!-- 注册方法名过滤通知器 advisor -->
+	<bean id="logMethodPointcutAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="mappedNames">
+			<list>
+				<value>do*</value>
+			</list>
+		</property>
+		<property name="advice">
+			<ref local="logAdvisor" />
+		</property>
+	</bean>
+	
+	<bean id="businessLogMethodPointcutAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="mappedNames">
+			<list>
+				<value>doCreate*</value>
+				<value>doUpdate*</value>
+				<value>doRemove*</value>
+			</list>
+		</property>
+		<property name="advice">
+			<ref local="businessLogAdvisor" />
+		</property>
+	</bean>
+	
+	<bean id="trasactionMethodPointcutAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="mappedNames">
+			<list>
+				<value>do*</value>
+			</list>
+		</property>
+		<property name="advice">
+			<ref local="transactionAdvisor" />
+		</property>
+	</bean>	
+
+</beans>

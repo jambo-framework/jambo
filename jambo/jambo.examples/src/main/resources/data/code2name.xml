@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<syscode-config>
+	<!-- 注意：definition的值要唯一，推荐统一用大写字母 -->
+	<!-- 这里的VO实际上要对应数据库里的一张表 -->
+	<!-- $：固定查询，查询dictitem表 -->
+	<!-- #：动态查询，查询自定义的表 -->
+	<!-- @：动态SQL查询，查询自定义SQL的表 -->
+	<!-- 不带符号：本地参数查询，查询XML里定义的字典 -->
+
+	<!-- 注意："$" 是固定参数必须的一个定义，不能删除 -->
+	<syscode-dynamic>
+		<definition>$</definition>
+		<value-object>com.jambo.jop.business.system.config.dictitem.persistent.DictItemVO</value-object>
+		<code>dictCode</code>
+		<name>dictName</name>
+	</syscode-dynamic>
+	
+	<!-- 注意：如果需要使用该code2Name 项， CompanyVO 需要提供一个带 id,name 的构造函数-->
+	<syscode-dynamic>
+		<definition>COMPANY</definition>
+		<value-object>com.jambo.exam.business.example.company.persistent.CompanyVO</value-object>
+		<code>id</code>
+		<name>companyname</name>
+	</syscode-dynamic>
+	
+	<syscode-dynamic>
+		<definition>EMPLOYEE</definition>
+		<value-object>com.jambo.exam.business.example.employee.persistent.EmployeeVO</value-object>
+		<code>id</code>
+        <name>empname</name>
+	</syscode-dynamic>
+	
+	<!-- 这种方式用于指定任意表为代码表,支持两种方式。注意：底层不进行类型校检，请不定指定错误的sql-->
+	<!-- sql = * 以BaseDAO内部方法进行查询，查询为code等于代码编号 -->
+	<!-- 注意：如果需要这样使用该code2Name 项， CompanyVO 需要提供一个带 shortname,companyname 的构造函数-->
+	<syscode-dynamic>
+		<definition>COMPANY_FIELD</definition>
+		<value-object>com.jambo.exam.business.example.company.persistent.CompanyVO</value-object>
+		<code>shortname</code>
+		<name>companyname</name>
+		<sql>*</sql>
+	</syscode-dynamic>
+	
+	<!-- sql = select * from table,完整的查询SQL，则以SQL进行查询，并在最后增加"and code='value'"条件，注意:提供的SQL不能与增加的条件冲突 -->
+	<syscode-dynamic>
+		<definition>COMPANY_SQL</definition>
+		<value-object>com.jambo.exam.business.example.company.persistent.CompanyVO</value-object>
+		<code>shortname</code>
+		<name>companyname</name>
+		<sql>SELECT * FROM EXAM_COMPANY WHERE companyname='999公司'</sql>
+	</syscode-dynamic>
+	
+	<syscode-local>
+		<definition>YES_NO</definition>
+		<items>
+			<itemvalue code="0">否</itemvalue>
+			<itemvalue code="1">是</itemvalue>		
+		</items>
+	</syscode-local>
+	
+	<!-- JOP SOA 相关配置 -->
+	
+
+	<syscode-local>
+		<definition>INVOKE_MODE</definition>
+		<items>
+			<itemvalue code="0">同步</itemvalue>
+			<itemvalue code="1">异步</itemvalue>		
+		</items>
+	</syscode-local>
+	
+	<syscode-local>
+		<definition>INVOKE_PROTOCOL</definition>
+		<items>
+			<itemvalue code="RMI">远程EJB协议(RMI)</itemvalue>
+			<itemvalue code="RMI_LOCAL">远程LOCAL EJB协议(RMI_LOCAL)</itemvalue>		
+			<itemvalue code="CTG">CICS协议</itemvalue>		
+			<itemvalue code="SOAP">SOAP协议</itemvalue>	
+		</items>
+	</syscode-local>
+	
+	<!-- TARGET_SYSTEM 定义，
+		要依据 applicationContext.xml 中 id为com.jambo.jop.adapter.InvokeController的bean 的adapterMap属性中定义的保持一致.
+		systemName 的中文名参考对应目标系统bean，即class为com.jambo.jop.adapter.TargetSystem 的bean中的 systemName属性的值。
+	 -->
+	<syscode-local>
+		<definition>TARGET_SYSTEM</definition> 
+		<items>
+			<itemvalue code="OUT">对外接口系统</itemvalue>
+			<itemvalue code="EJB_DEMO_SYS">EJB演示系统</itemvalue>
+			<itemvalue code="CICS_DEMO_SYS">CICS演示系统</itemvalue>		
+			<itemvalue code="BOSS_ACCOUNT_EJB">BOSS EJB帐务系统</itemvalue>		
+			<itemvalue code="BOSS_ACCOUNT_CICS">BOSS CICS帐务系统</itemvalue>	
+			<itemvalue code="BOSS_BUSINESS_WS">BOSS营业 Web Service 系统</itemvalue>	
+		</items>
+	</syscode-local>
+	
+	<syscode-local>
+		<definition>COMPANY_STATE</definition>
+		<items>
+			<itemvalue code="0">禁用</itemvalue>
+			<itemvalue code="1">有效</itemvalue>
+			<itemvalue code="-1">已删除</itemvalue>			
+		</items>
+	</syscode-local>
+</syscode-config>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+	<extension
+	      point="org.eclipse.ui.preferencePages">
+	   <page
+          category="Jambo Code Generator"
+          class="com.jambo.tools.codegen.preferences.SourcePage"
+          id="Source"
+          name="Source Settings"/>
+    <page
+          class="org.eclipse.ui.internal.dialogs.EmptyPreferencePage"
+          id="Jambo Code Generator"
+          name="Jambo Code Generator">
+    </page>
+    <page
+          category="Jambo Code Generator"
+          class="com.jambo.tools.codegen.preferences.DatabasePage"
+          id="Database Settings"
+          name="Database Settings"/>
+    <page
+          category="Jambo Code Generator"
+          class="com.jambo.tools.codegen.preferences.TemplatePage"
+          id="Templets Settings"
+          name="Templets Settings"/>
+	</extension>
+	<extension
+       point="org.eclipse.core.runtime.preferences">
+	   <initializer class="com.jambo.tools.codegen.preferences.PreferenceInitializer"/>
+	</extension>
+	<extension
+	      point="org.eclipse.ui.newWizards">
+	   <wizard
+	         category="Jambo Code Generator"
+	         class="com.jambo.tools.codegen.wizards.CodegenNewWizard"
+	         descriptionImage="icons/edtsrclkup_wiz.gif"
+	         icon="icons/ICON_TITLE_NEWS.GIF"
+	         id="com.jambo.tools.codegen.wizards.CodegenNewWizard"
+	         name="Code Generator Wizard"/>
+    <category
+          id="Jambo Code Generator"
+          name="Jambo Generator Wizards"/>
+	</extension>
+</plugin>

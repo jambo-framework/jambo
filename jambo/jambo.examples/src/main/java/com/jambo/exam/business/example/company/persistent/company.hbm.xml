@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.jambo.exam.business.example.company.persistent.CompanyVO" table="EXAM_COMPANY">
+		<id column="ID" name="id" type="java.lang.Long">
+		<generator class="sequence">
+		      	<param name="sequence">EXAM_COMPANY_SEQ</param>
+		      </generator>
+		</id>
+		<property column="COMPANYNAME" length="20" name="companyname" type="java.lang.String"/>
+		<property column="SHORTNAME" length="80" name="shortname" type="java.lang.String"/>
+		<property column="ADDRESS" length="40" name="address" type="java.lang.String"/>
+		<property column="CAPITAL" length="22" name="capital" type="java.lang.Long"/>
+		<property column="CREATEDATE" length="7" name="createdate" type="java.util.Date"/>
+		<property column="BANK" length="40" name="bank" type="java.lang.String"/>
+		<property column="ACCOUNT" length="30" name="account" type="java.lang.String"/>
+		<property column="STATE" length="1" name="state" type="java.lang.Byte"/>
+	</class>
+	<!-- 查询部分字段范例，Java代码见 CompanyBOTest.java 和CompanyDAO.java -->
+	<sql-query name="example.company.queryCompanyNames">
+		select com.companyname from exam_company com
+	</sql-query>
+	
+	<sql-query name="example.company.queryCompanyCapitals">
+		select distinct capital from exam_company com where capital is not null
+	</sql-query>
+	
+	<sql-query name="example.company.queryIdAndAccounts">
+		select id ,account, address as addr, state sss from exam_company 
+	</sql-query>
+	
+</hibernate-mapping>

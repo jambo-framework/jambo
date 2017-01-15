@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.jambo.jop.business.base.dictitemlog.DictitemlogVO" table="SA_DB_DICTITEMLOG">
+<id column="LOGID" length="14" name="logid" type="java.lang.Long">
+<generator class="sequence">
+<param name="sequence">SA_DB_DICTITEMLOG_SEQ</param>
+</generator>
+</id>
+<property column="OPTIME" length="7" name="optime" type="java.util.Date"/>
+<property column="OPRCODE" length="16" name="oprcode" type="java.lang.String"/>
+<property column="OPRTYPE" length="8" name="oprtype" type="java.lang.String"/>
+<property column="SUCCESS" length="8" name="success" type="java.lang.String"/>
+<property column="DICTID" length="16" name="dictid" type="java.lang.String"/>
+<property column="DICTNAME" length="64" name="dictname" type="java.lang.String"/>
+<property column="GROUPID" length="32" name="groupid" type="java.lang.String"/>
+<property column="SORTORDER" length="3" name="sortorder" type="java.lang.Short"/>
+<property column="STATUS" length="1" name="status" type="java.lang.Byte"/>
+<property column="STATUSDATE" length="7" name="statusdate" type="java.util.Date"/>
+<property column="DESCRIPTION" length="128" name="description" type="java.lang.String"/>
+</class>
+</hibernate-mapping>

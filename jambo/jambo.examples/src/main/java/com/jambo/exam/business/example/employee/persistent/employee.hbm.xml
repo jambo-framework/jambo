@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.jambo.exam.business.example.employee.persistent.EmployeeVO" table="EXAM_EMPLOYEE">
+		<id column="ID" name="id" type="java.lang.Long">
+		<generator class="sequence">
+		      	<param name="sequence">EXAM_EMPLOYEE_SEQ</param>
+		      </generator>
+		</id>
+		<property column="COMPANYID" name="companyid" type="java.lang.Long"/>
+		<property column="EMPNAME" length="20" name="empname" type="java.lang.String"/>
+		<property column="ADDRESS" length="40" name="address" type="java.lang.String"/>
+		<property column="BANK" length="40" name="bank" type="java.lang.String"/>
+		<property column="ACCOUNT" length="30" name="account" type="java.lang.String"/>
+	</class>
+
+	<sql-query name="queryCompanyEmp">
+		<return class="com.jambo.exam.business.example.employee.persistent.EmployeeVO" />
+			select b.id, b.companyid, b.empname, b.address, b.bank, b.account, 
+				a.companyname from exam_employee b, exam_company a
+			where a.id = b.companyid
+	</sql-query>
+	
+	<sql-query name="queryCompanyEmp2">
+		<return class="com.jambo.exam.business.example.employee.persistent.EmployeeVO" />
+			select b.id, b.companyid, b.empname, b.address, b.bank, b.account, 
+				a.companyname from exam_employee b, exam_company a
+			where a.id in  ( :companyids )
+	</sql-query>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+/**
+ * auto-generated code
+ * $date
+ */
+$pkgName
+
+import java.io.Serializable;
+import $modelPkg.$daoClassName;
+import $modelPkg.$pojoClassName;
+import com.nbf.jop.infrastructure.control.AbstractBO;
+import com.nbf.jop.infrastructure.db.DAOFactory;
+import com.nbf.jop.infrastructure.db.DataPackage;
+
+/**
+ * <p>Title: $className </p>;
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: nbf-framework Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+public class $className extends AbstractBO {
+
+    @Override
+    protected Class getDAOClasses() {
+        return (${daoClassName}.class);
+    }
+
+    public $daoClassName getDAO() throws Exception {
+        return ($daoClassName)getBaseDAO();
+    }
+}

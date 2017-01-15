@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--范例dubbo服务配置-->
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="JamboExamples" />
+
+    <!-- 使用multicast广播注册中心暴露服务地址 -->
+    <dubbo:registry address="multicast://224.5.6.7:1234" />
+    <!--<dubbo:registry address="zookeeper://172.17.0.41:2181" />-->
+
+    <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
+    <dubbo:reference id="demoService" interface="com.jambo.exam.service.ExampleService" check="false" />
+
+    <dubbo:reference id="code2NameService" interface="com.jambo.jop.infrastructure.component.Code2NameService" check="false"/>
+
+</beans>

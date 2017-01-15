@@ -1,0 +1,128 @@
+<%@ page language="java" contentType="text/html;charset=utf-8"%>
+<%@ include file="$includeFile" %>
+<html>
+<head>
+    <title><s:text name="titleList"/></title>
+    <script language="JavaScript" type="text/JavaScript">
+        function ev_check() {
+#set($num = 0)
+#foreach($tmp in $helper.getParams())
+#set($cname = $paramColumn.get($tmp))
+#set($len = $lens.get($num))
+#set($t = $types.get($num))
+#set($num = $num+1)
+            addfield('param.$tmp', '<s:text name="$cname"/>', '$t', false, '$len');
+#end
+            return checkval(window);
+        }
+    </script>
+</head>
+
+<body>
+<s:form  key="formList" cssStyle="formList" theme="simple" onsubmit="return ev_check();">
+	<%//下面的控件给Action提供数据，用来分页%>
+    <s:hidden name="param._orderby"/>
+    <s:hidden name="param._desc"/>
+    <s:hidden name="param._pageno"/>
+    <s:hidden name="param._pagesize"/>
+    <s:hidden name="param.queryAll"/>
+    <input type="hidden" name="_rowcount" value="<s:property value="dp.rowCount" />"/>
+    
+   <div class="error_text">
+	   	<s:actionerror/><s:actionmessage/>
+   </div >
+
+
+	<div class="table_div">
+		<table class="top_table">
+			<tr> 
+				<td width="210" class="AreaName" align="left" valign=middle><s:text name="list"/></td>
+				<td>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" ID="Table3">
+					<tr>
+                    <td align=right>
+                    	<s:i18n name="public">
+                        <input type="button" name="btnNew"  class="add" onmouseover="buttonover(this);"
+                            onmouseout="buttonout(this);" onfocus="buttonover(this)" onblur="buttonout(this)"
+                            value="<s:text name="button_new"/>" onClick="doNew('/$moduleName/${baseClassName}_new.do')">
+                        
+                            <input type="button" name="btnDelete" class="delete" onmouseover="buttonover(this);"
+                            onmouseout="buttonout(this);" onfocus="buttonover(this)" onblur="buttonout(this)"
+                            value="<s:text name="button_delete"/>" onClick="doDelete('/$moduleName/${baseClassName}_delete.do')">
+
+                        <input type="button" class="query" onmouseover="buttonover(this);"
+                            onmouseout="buttonout(this);" onfocus="buttonover(this)" onblur="buttonout(this)"
+                            value="<s:text name="button_search"/>" onClick="doQuery();">
+                       </s:i18n>
+                    </td>
+                    </tr>
+				</table></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="table_div">
+        <table class="form_table">
+            <tr>
+#foreach($tmp in $helper.getParams())
+#set($cname = $paramColumn.get($tmp))
+                <td width="126" height="20" align="right" class="form_table_right"><s:text name="$cname"/>:</td>
+                <td class="form_table_left">
+                    <s:textfield cssStyle="form_input_1x" name="param.$tmp" />
+                </td>
+#end
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="table_div">
+        <table class="table_style" ID="Table2">
+            <tr class="table_style_head">
+               	<s:i18n name="public">
+                <td title="<s:text name="list_title_select"/>">
+                    <input type="checkbox" name="allbox" onclick="checkAll();" class="table_checkbox"/>
+                </td>
+                </s:i18n>
+#foreach($tmp int $helper.getColumns())
+                <td>
+                    <a href="javascript:doOrderby('$tmp')"><s:text name="$tmp"/></a>                 
+                </td>
+#end
+               	<s:i18n name="public">
+                <td><s:text name="column_operate"/></td>
+                </s:i18n>
+            </tr>
+            <s:iterator value="dp.datas">
+                 <tr class="table_style_content" align="center">
+					 <%-- 复合主键用“|”间隔开 --%>
+                     <td>
+                         <input type="checkbox" name="param._selectitem" value="<s:property value='$pk'/>" onclick="checkOne();" class="table_checkbox">
+                     </td>
+                     <td><a href='<s:url action="example2_edit.do">
+	                         <s:param name="param._pk" value="$pk"/>
+	                     	</s:url>'>
+							<s:property value='$pk'/>
+                         </a>
+					 </td>
+#foreach($tmp int $helper.getColumns())
+#if($tmp != $pk )
+                     <td><s:property value="$tmp" /></td>
+#end
+#end
+                     <td>
+                     <s:i18n name="public">
+                         <a href="#"><s:text name="button_print"/>|<s:text name="button_enable"/></a>
+                     </s:i18n>
+                     </td>
+                 </tr>
+             </s:iterator>
+        </table>
+   </div>
+   
+   <div class="table_div">
+		<%@ include file="/common/pageNav.jsp"%>
+   </div>
+</s:form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+/**
+ * auto-generated code
+ * $date
+ */
+ $pkgName
+
+import $modelPkg.$pojoClassName;
+import $controlPkg.$boClassName;
+import com.jambo.jop.ui.spring.BaseAction;
+import com.jambo.jop.ui.worker.BaseMVCWorker;
+import org.springframework.stereotype.Controller;
+
+/**
+ * <p>Title: $className </p>;
+ * <p>Description: action class </p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: jambo-framework Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+ @Controller
+public class $className extends BaseAction{
+	
+	public $className() {
+		super();
+
+        setWorker(new BaseMVCWorker(this, ${boClassName}.class, ${pojoClassName}.class));
+        setBasepath("/$moduleName/$baseClassName");
+	}
+}

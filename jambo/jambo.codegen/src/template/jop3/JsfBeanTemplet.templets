@@ -1,0 +1,25 @@
+$pkgName
+
+import $modelPkg.$poClassName;
+import com.sunrise.boss.common.base.basepagedface.BaseListFace;
+import $modelPkg.$listVOClassName;
+import $delegatePkg.$dlgClassName;
+
+/**
+ * auto-generated code
+ * $date
+ */
+/**
+ * <p>Title: $className </p>;
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: sunrise Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+public class $className extends BaseListFace {
+
+    public  $className() {
+        super( $poClassCla,  $dlgClassCla,  $formClassCla,  $listVOClassCla);
+    }
+}

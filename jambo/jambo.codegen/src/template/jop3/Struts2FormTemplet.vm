@@ -1,0 +1,52 @@
+
+import com.sunrise.boss.ui.base.BaseActionForm;
+import $modelPkg.$poClassName;
+$(".do?aaa=bbb")
+          #set($num = 0)
+	      #foreach($tmp in $array)
+	        	#set($ss = $array.get($num))
+	        	#set($num = $num+1)
+	        	$ss
+	      #end
+#set($isNew = ".isNew")
+#set($test = $isNew.substring(1,2).toUpperCase()+$isNew.substring(2))
+/**
+ * <p>Title: $EEStart$ELStart$className$isNew$test$Eend$Eend </p>;
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: sunrise Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+public interface $className extends BaseActionForm {
+#foreach($field in $fields.iterator())
+    #private $field.getJavaType().getName() $shd.getRealName($field);
+#end
+
+#foreach($paramField in $helper.getParams())
+    #private String $paramField;
+#end
+
+
+#foreach($field in $fields.iterator())
+    #public $field.getJavaType().getName() get$shd.getMethodName($field)() {
+        #return this.$shd.getRealName($field);
+    #}
+
+    #public void set$shd.getMethodName($field)($field.getJavaType().getName() $shd.getRealName($field)) {
+        #this.$shd.getRealName($field)> = $shd.getRealName($field);
+    #}
+
+#end
+
+#foreach($paramField in $helper.getParams())
+    #public String get$paramField() {
+        #return this.$paramField;
+    #}
+
+    #public void set$paramField(String $paramField) {
+        #this.$paramField = $paramField;
+    #}
+
+#end
+}

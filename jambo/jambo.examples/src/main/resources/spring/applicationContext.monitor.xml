@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+		
+	<!-- 接口注册工具。用于注册接口的默认实现类。InterfaceUtils.createDefaultObject(接口名) 方法可以创建默认的实现类实例。
+		以分离接口和实现。
+	-->
+	<bean id="com.jambo.jop.common.utils.lang.InterfaceUtils" class="com.jambo.jop.common.utils.lang.InterfaceUtils">
+		<property name="interfaceClassMapping">
+			<props>
+                <prop key="com.jambo.jop.infrastructure.component.Code2Name">com.jambo.jop.infrastructure.component.impl.DefaultCode2Name</prop>
+                <prop key="com.jambo.jop.ui.common.UserProvider">com.jambo.jop.ui.struts2.Struts2UserProvider</prop>
+
+                <!--实际项目中应该使用自己的实现类-->
+                <prop key="com.jambo.jop.ui.filter.PermissionChecker">com.jambo.ngcrm.common.check.WebPermissionChecker</prop>
+
+                <!--实际项目中应该使用自己的数据字典类,参考下面的注释-->
+                <prop key="com.jambo.jop.business.base.dictitem.IDictitemDAO">com.jambo.jop.business.base.dictitem.DictitemDAO</prop>
+                <prop key="com.jambo.jop.business.base.dictitem.IDictitemVO">com.jambo.jop.business.base.dictitem.DictitemVO</prop>
+                <!--<prop key="com.jambo.jop.business.base.dictitem.IDictitemDAO">com.jambo.ngcrm.business.base.dictitem.DictitemDAO</prop>-->
+                <!--<prop key="com.jambo.jop.business.base.dictitem.IDictitemVO">com.jambo.ngcrm.business.base.dictitem.DictitemVO</prop>-->
+
+                <prop key="com.jambo.ngcrm.control.base.opershortcut.OperShortcutTreeHelper">com.jambo.ngcrm.control.base.opershortcut.OperShortcutTreeHelper</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- 单数据源使用	-->
+	<bean id="com.jambo.jop.infrastructure.db.SessionFactoryRouter" class="com.jambo.jop.infrastructure.db.hibernate3.Hibernate3SessionFactoryRouter"></bean>
+	
+	<!-- sessionFactory_DB_COMMON 也可以替换为在 sessionFactory.properties 中需配置 DB_COMMON=hibernate.cfg.xml作为数据源 -->
+	<bean id="sessionFactory_DB_COMMON" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">	
+		<property name="configLocations">		
+			<list>
+				<value>classpath:hibernate.cfg.xml</value>
+			</list>	
+		</property>
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory_DB_COMMON" />
+		</property> 
+	</bean>	
+	
+	
+	
+	<!-- 多数据源使用 
+	  multiDBMode 取值: 公共+地市库模式 COMMON_CITY_MODE， 平行库模式:BROTHERS_MODE
+
+	<bean id="com.jambo.jop.infrastructure.db.SessionFactoryRouter" class="com.jambo.jop.infrastructure.db.hibernate3.Hibernate3SessionFactoryRouter">
+		<property name="sessionFactoryConfig" value="data/sessionFactory.properties" />
+		<property name="defaultDataSource" value="DB_COMMON"/>		
+		<property name="multiDBMode" value="COMMON_CITY_MODE"/> 
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.transaction.jta.JtaTransactionManager">
+		<property name="userTransactionName" value="java:comp/UserTransaction"/>
+	</bean>	
+		--> 
+	
+	<!-- 注册自动代理创建，为业务Bean添加拦截器 -->	
+	<bean id="BOAutoProxyCreator" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">	
+		<property name="proxyTargetClass" value="true"></property>
+		<property name="beanNames">
+			<list>
+				<value>*BO</value>				
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>				
+				
+				<!-- <value>logMethodPointcutAdvisor</value>    -->
+				<value>businessLogMethodPointcutAdvisor</value>					
+				<value>trasactionMethodPointcutAdvisor</value>	<!-- 注意： 事务拦截器必须包含在业务日志拦截器中，以免事务控制混乱；或者将业务日志的方法recordLog 设置为 PROPAGATION_REQUIRES_NEW 属性 -->					
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 性能监控 -->
+	<!-- 注册通知器 advisor -->
+	<bean id="logAdvisor" class="com.jambo.jop.infrastructure.advisor.LogAdvisor"/>
+	<bean id="businessLogAdvisor" class="com.jambo.jop.common.businesslog.BusinessLogAdvisor"/>
+	
+	<bean id="transactionAdvisor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager">
+			<ref local="transactionManager"/>
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<!-- 注意开发规范：业务bean的业务方法必须为 do* 格式，才能被包含事务！ -->
+				<prop key="do*">PROPAGATION_REQUIRED</prop>				
+			</props>
+		</property>
+	</bean>
+	
+	 <bean id="jamonInterceptor" class="org.springframework.aop.interceptor.JamonPerformanceMonitorInterceptor"/> 
+	 
+	<!-- 注册方法名过滤通知器 advisor -->
+	<bean id="logMethodPointcutAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="mappedNames">
+			<list>
+				<value>do*</value>
+			</list>
+		</property>
+		<property name="advice">
+			<ref local="logAdvisor" />
+		</property>
+	</bean>
+	
+	<bean id="businessLogMethodPointcutAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="mappedNames">
+			<list>
+				<value>doCreate*</value>
+				<value>doUpdate*</value>
+				<value>doRemove*</value>
+			</list>
+		</property>
+		<property name="advice">
+			<ref local="businessLogAdvisor" />
+		</property>
+	</bean>
+	
+	<bean id="trasactionMethodPointcutAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="mappedNames">
+			<list>
+				<value>do*</value>
+			</list>
+		</property>
+		<property name="advice">
+			<ref local="transactionAdvisor" />
+		</property>
+	</bean>	
+	
+	
+	<!-- 声明要用的监控器 -->
+	<bean id="com.jambo.jop.system.monitor.MonitorFactory" class="com.jambo.jop.system.monitor.MonitorFactory" >
+		<property name="monitorBeanNames">
+			<list>
+				<value>serviceFluxMonitor</value>
+				<value>serviceAccessMonitor</value>			
+			</list>
+		</property>
+		<property name="monitorControllerBeanNames">
+			<list>			
+				<value>serviceAccessLimitMonitorController</value>
+			</list>
+		</property>
+	</bean>
+	
+	
+	<!--  服务流量监控器要用 singleton -->
+	 <bean id="serviceFluxMonitor" class="com.jambo.jop.system.monitor.FluxMonitor" >
+	 	<property name="name" value="服务流量监控器"/>
+	 	<property name="on" value="true"/>
+	 </bean>
+	 
+	 <!--  服务访问监控器要用 prototype -->
+	 <bean id="serviceAccessMonitor" class="com.jambo.jop.system.monitor.AccessMonitor" scope="prototype" >
+ 		<property name="name" value="服务访问监控器"/>
+	 	<property name="on" value="true"/>
+	 </bean>
+ 		
+ 	<!--  服务限流控制 -->
+	 <bean id="serviceAccessLimitMonitorController" class="com.jambo.jop.system.monitor.control.AccessLimitMonitorController">
+	 	<property name="name" value="服务限流控制器"/>
+	 	<property name="on" value="true"/>
+	 </bean>
+	 
+	<!--  原子业务流量监控器要用 singleton ，对InvokeController.invoke 基于目标系统 systemName 进行监控。 用于路由计算时作为流量判断的依据-->
+	 <bean id="invokeControllerFluxMonitor" class="com.jambo.jop.system.monitor.InvokeControllerFluxMonitor" >
+	 	<property name="name" value="原子业务流量监控器"/>
+	 	<property name="on" value="true"/>
+	 </bean> 
+	 
+	<!-- 服务流量监控拦截器	 -->	
+	 <bean id="serviceFluxMonitorInterceptor" class="com.jambo.jop.system.monitor.interceptor.MonitorInterceptor">
+	 	<property name="monitorBeanName" value="serviceFluxMonitor"/>	<!-- 注意不要使用ref注入 -->	 		
+	 </bean>
+	  
+	 
+	 <bean id="serviceFluxMonitorAutoProxyCreator" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">	
+		<property name="proxyTargetClass" value="true"></property>
+		<property name="beanNames">
+			<list>
+				<value>*XXXService</value>			
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>	
+				<value>serviceAccessLimitMonitorControllerMethodPointcutAdvisor</value>	
+				<value>serviceFluxMonitorMethodPointcutAdvisor</value>
+				<value>serviceAccessMonitorMethodPointcutAdvisor</value>					
+			</list>
+		</property>
+	</bean>
+	
+	 <bean id="serviceFluxMonitorMethodPointcutAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="mappedNames">
+			<list>
+				<value>process</value>	<!-- 针对XXXService的process进行拦截 -->			
+			</list>
+		</property>
+		<property name="advice">
+			<ref local="serviceFluxMonitorInterceptor" />
+		</property>
+	</bean>
+		
+	<!-- 服务访问监控器(异步)，监控访问量，性能等 -->	 
+	 <bean id="serviceAccessMonitorInterceptor" class="com.jambo.jop.system.monitor.interceptor.MonitorInterceptor">
+	 	<property name="monitorBeanName" value="serviceAccessMonitor"/>	
+	 </bean>	
+	
+	 <bean id="serviceAccessMonitorMethodPointcutAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="mappedNames">
+			<list>
+				<value>process</value>		<!-- 针对XXXService的process进行拦截 -->		
+			</list>
+		</property>
+		<property name="advice">
+			<ref local="serviceAccessMonitorInterceptor" />
+		</property>
+	</bean>
+	
+	<!-- 服务限流控制 -->
+	 <bean id="serviceAccessLimitMonitorControllerInterceptor" class="com.jambo.jop.system.monitor.interceptor.MonitorControlorInterceptor">
+	 	<property name="controllerBeanName" value="serviceAccessLimitMonitorController"/>	
+	 </bean>	
+	
+	 <bean id="serviceAccessLimitMonitorControllerMethodPointcutAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="mappedNames">
+			<list>
+				<value>process</value>	<!-- 针对XXXService的process进行拦截 -->			
+			</list>
+		</property>
+		<property name="advice">
+			<ref local="serviceAccessLimitMonitorControllerInterceptor" />
+		</property>
+	</bean>
+	 
+	<!-- 原子业务流量监控拦截器	 -->	
+	 <bean id="invokeControllerFluxMonitorInterceptor" class="com.jambo.jop.system.monitor.interceptor.MonitorInterceptor">
+	 	<property name="monitorBeanName" value="invokeControllerFluxMonitor"/>	<!-- 注意不要使用ref注入 -->	 		
+	 </bean>
+	  
+	 
+	 <bean id="invokeControllerFluxMonitorAutoProxyCreator" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">	
+		<property name="proxyTargetClass" value="true"></property>
+		<property name="beanNames">
+			<list>
+				<value>com.jambo.jop.adapter.InvokeController</value>
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>	
+				<value>invokeControllerFluxMonitorMethodPointcutAdvisor</value>
+			</list>
+		</property>
+	</bean>
+	
+	 <bean id="invokeControllerFluxMonitorMethodPointcutAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="mappedNames">
+			<list>
+				<value>invoke</value>	<!-- 针对XXXService的process进行拦截 -->			
+			</list>
+		</property>
+		<property name="advice">
+			<ref local="invokeControllerFluxMonitorInterceptor" />
+		</property>
+	</bean>
+	 
+	 <!-- 服务限流控制*************************************** -->
+	 
+	 <!-- 服务限流BOM,要为其设定流量监控器bean，以便它能获取流量进行限流逻辑控制 -->
+	 <bean id="com.jambo.jop.system.monitor.control.AccessLimitBom" class="com.jambo.jop.system.monitor.control.AccessLimitBom" scope="prototype">
+	 	<property name="fluxMonitorBeanName" value="serviceFluxMonitor"/>
+	 </bean>
+	 
+ 	<!-- 原子业务调用路由BOM,要为其设定流量监控器bean，以便它能获取流量进行路由判断 -->
+	 <bean id="com.jambo.jop.router.RouteRuleBOM" class="com.jambo.jop.router.RouteRuleBOM" scope="prototype">
+	 	<property name="fluxMonitorBeanName" value="invokeControllerFluxMonitor"/>
+	 </bean>
+	 
+</beans>

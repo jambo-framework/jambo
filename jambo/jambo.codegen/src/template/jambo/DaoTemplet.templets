@@ -1,0 +1,25 @@
+/**
+ * auto-generated code  
+ * $date
+ */
+$pkgName
+
+import com.jambo.jop.infrastructure.db.AbstractDAO;
+
+/**
+ * <p>Title: $className</p>
+ * <p>Description: Data Access Object</p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: jambo-framework Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+public class $className extends AbstractDAO {
+
+    /**
+     * default constructor
+     */
+    public $className(){
+        super($pojoClasses);
+    }
+}

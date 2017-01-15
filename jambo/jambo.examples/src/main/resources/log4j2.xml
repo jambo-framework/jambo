@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="warn">
+    <appenders>
+        <!-- 架构核心JOP2日志输出到一个文件，开发，测试时使用。-->
+        <RollingFile  name="jopLog" fileName="log/jop.log" filePattern="log/jop-%d{yyyy-MM-dd-HH}.log.gz">
+            <PatternLayout>
+                <pattern>%d %p %C (%t:%x) %m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingFile>
+
+        <!-- 其它日志输出-->
+        <RollingFile name="otherLog" fileName="log/other.log" filePattern="log/other-%d{yyyy-MM-dd-HH}.log.gz">
+            <PatternLayout>
+                <pattern>%d %p %C (%t:%x) %m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingFile>
+
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %p %C{36} (%t:%x) %L %m%n"/>
+        </Console>
+    </appenders>
+
+    <loggers>
+        <logger name="com.jambo.jop" level="ERROR" additivity="false">
+            <appender-ref ref="jopLog"/>
+        </logger>
+
+        <logger name="org.hibernate" level="ALL" additivity="false">
+            <appender-ref ref="otherLog"/>
+        </logger>
+
+        <logger name="org.springframework" level="ERROR" additivity="false">
+            <appender-ref ref="otherLog"/>
+        </logger>
+
+        <logger name="com.jambo" level="ALL" additivity="false">
+            <!--appender-ref ref="Console"/-->
+            <appender-ref ref="otherLog"/>
+        </logger>
+
+        <root level="info">
+            <appender-ref ref="otherLog"/>
+        </root>
+    </loggers>
+</configuration>

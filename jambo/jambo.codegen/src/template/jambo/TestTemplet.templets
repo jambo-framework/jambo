@@ -1,0 +1,70 @@
+/**
+ * auto-generated code
+ * $date
+ */
+$pkgName
+
+#if($isParam.booleanValue())
+import $modelPkg.$paramClassName;
+#end
+import $controlPkg.$boClassName ;
+import $modelPkg.$pojoClassName;
+import com.jambo.jop.infrastructure.control.BOFactory;
+import com.jambo.jop.infrastructure.db.DataPackage;
+import com.jambo.jop.test.jop.HibernateBOTestCase;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
+
+/**
+ * <p>Title: $className</p>
+ * <p>Description: BO Test Class </p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: jambo-framework Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+public class $className extends HibernateBOTestCase {
+    protected static final Logger log = (Logger) LogManager.getLogger(${className}.class);
+
+    private $boClassName bo;
+
+    private static final String DATAFILE = "${pkgForder}/${className}.data.xml";
+
+    public $className() throws Exception {
+        super("$className");
+        this.schema = "PUBLIC";
+        this.testDB = "sessionFactory_DB_COMMON";
+        bo = ($boClassName)BOFactory.build(${boClassName}.class,getUser());
+    }
+
+	protected void setUp() throws Exception {
+		super.setUp();
+		// TODO prepare test data
+	}
+
+	protected void tearDown() throws Exception {
+		super.tearDown();
+		// TODO clear test data
+	}
+
+	/**
+	 * create, update, modify, delete test
+	 */
+	public void testCRUD() throws Exception{
+	}
+
+    public void testDoQuery() throws Exception {
+        insertFileIntoDb(DATAFILE);
+        $paramClassName params = new $paramClassName();
+        // TODO do something
+        try {
+            DataPackage dp = bo.query(params);
+            assertNotNull(dp);
+            assertNotNull(dp.getDatas());
+            // TODO more assert
+        } catch (Exception e) {
+            log.error(e.getMessage(),e);
+            fail(e.getMessage());
+        }
+    }
+}

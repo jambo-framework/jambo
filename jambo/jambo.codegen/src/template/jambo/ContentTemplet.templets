@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html;charset=utf-8"%>
+<%@ include file="../../inc/contentheadinc.jsp" %>
+<html>
+<head>
+    <fmt:setBundle basename="i18n.$moduleName.${actionName}" var="${className}"/>
+    <title><fmt:message key="titleUpdate"  bundle="${${className}}"/></title>
+    <script type="text/javascript">
+        //initial page
+        $(document).ready(function(){
+            //set control disable 
+            //$("#companyname").disable = ($("#cmd").val()!="NEW")
+        });
+    </script>
+</head>
+<body>
+<div class="content">
+    <div class="box">
+        <div class="box-head">
+            <h3><fmt:message key="content"  bundle="${${className}}"/></h3>
+        </div>
+        <div class="box-content">
+
+            <%@ include file="../../inc/alertinc.jsp" %>
+
+            <%--will call jquery.validate if class inculde validate --%>
+            <form id="formItem" name="formItem" action="/$moduleName/${actionName}/save.do" class="form-horizontal validate"  method="post" >
+
+                <form:hidden path="form.id"/>
+                <input type="hidden" name="cmd" value="${cmd}"/>
+
+                <form:hidden path="param._orderby"/>
+                <form:hidden path="param._desc"/>
+                <form:hidden path="param._pageno"/>
+                <form:hidden path="param._pagesize"/>
+				#foreach($tmp in $helper.getParams())
+				<form:hidden path="param.$tmp"/>
+				#end
+
+                <div class="row-fluid">
+				#set($num = 0)
+				#foreach($tmp in $helper.getColumns())
+				#set($len = $lens.get($num))
+				#set($type = $types.get($num))
+				#set($num = $num+1)
+                    <div class="control-group">
+                        <label for="$tmp" class="control-label"><fmt:message key="$tmp"  bundle="${${className}}"/>:</label>
+                        <div class="controls">
+                            <form:input class="input-square required" path="form.$tmp" maxlength="$len"/>
+                        </div>
+                    </div>
+                #end
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit" onclick="doSave('/$moduleName/${actionName}/save.do')">
+                        <fmt:message key='button_save'/></button>
+                    <input type="reset" class='btn btn-danger' value="<fmt:message key='button_reset'/>">
+                    <a href="javascript:void(0);" onclick="doReturn('/$moduleName/${actionName}/list.do')" class="btn btn-info">
+                        <fmt:message key='button_return'/></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

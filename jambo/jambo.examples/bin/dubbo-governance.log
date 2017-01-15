@@ -1,0 +1,6 @@
+2015-04-03 09:53:03,879 [main] INFO  ? (?:?) - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2015-04-03 09:53:04,007 [main] INFO  com.alibaba.dubbo.container.Main (Main.java:58) -  [DUBBO] Use container type([log4j, spring]) to run dubbo serivce., dubbo version: 2.8.3, current host: 127.0.0.1
+2015-04-03 10:24:06,196 [main] INFO  ? (?:?) - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2015-04-03 10:24:06,331 [main] INFO  com.alibaba.dubbo.container.Main (Main.java:58) -  [DUBBO] Use container type([log4j, spring]) to run dubbo serivce., dubbo version: 2.8.3, current host: 127.0.0.1
+2015-04-03 10:45:16,659 [main] INFO  ? (?:?) - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2015-04-03 10:45:16,788 [main] INFO  com.alibaba.dubbo.container.Main (Main.java:58) -  [DUBBO] Use container type([log4j, spring]) to run dubbo serivce., dubbo version: 2.8.3, current host: 127.0.0.1

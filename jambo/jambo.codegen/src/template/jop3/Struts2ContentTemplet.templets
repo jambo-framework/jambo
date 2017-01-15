@@ -1,0 +1,97 @@
+<%@ page language="java" contentType="text/html;charset=utf-8"%>
+<%@ include file="$includeFile"%>
+<html>
+<head>
+    <title><s:text name="titleUpdate"/></title>
+    <script language="JavaScript">
+        function ev_checkval() {
+#set($num = 0)
+#foreach($tmp in $helper.getColumns())
+#set($len = $lens.get($num))
+#set($type = $types.get($num))
+#set($num = $num+1)
+            addfield('form.$tmp', '<s:text name="$tmp"/>', '$type', false, $len);
+#end
+            return checkval(window);
+        }
+    </script>
+</head>
+<body>
+<s:form action="${baseClassName}_save.do" key="formItem" method="post" theme="simple">
+    <s:hidden name="form.$pk"/>
+    <s:hidden name="isNew"/>
+
+    <s:hidden name="querymode"/>
+
+    <s:hidden name="param._orderby"/>
+    <s:hidden name="param._desc"/>
+    <s:hidden name="param._pageno"/>
+    <s:hidden name="param._pagesize"/>
+#foreach($tmp in $helper.getParams())
+    <s:hidden name="param.$tmp"/>
+#end
+
+   <div class="error_text">
+	   	<s:actionerror/><s:actionmessage/>
+   </div >
+
+	<div class="table_div">	
+		<table class="top_table" border=0>
+			<tr> 
+				<td width="210" class="AreaName" align="left" valign=middle><s:text name="content"/></td>
+				<td>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" ID="Table3">
+					<tr>
+						<td align=right>
+						</td>
+                    </tr>
+				</table></td>
+			</tr>
+		</table>
+	</div>
+    <div class="table_div">
+        <table class="form_table">
+#set($num = 0)
+#foreach($tmp in $helper.getColumns())
+#set($len = $lens.get($num))
+#set($type = $types.get($num))
+#set($num = $num+1)
+            <tr>
+                <td width="20%" align="right" class="form_table_right"><div class="field-require"><s:text name="$tmp"/>:</div></td>
+                <td width="75%" align="left" class="form_table_left">
+			        <s:if test="isNew">
+                        <s:textfield cssStyle="form_input_1x" name="form.$tmp" maxlength="$len"/>
+			        </s:if>
+			        <s:else>
+						<s:textfield cssStyle="form_input_1x" name="form.$tmp" disabled="true"/>
+			        </s:else>
+                </td>
+            </tr>
+#end
+        </table>
+    </div>
+
+    <div class="table_div">
+        <table class="table_button_list">
+            <tr>
+                <td width="100%" class="form_table_center">
+                   	<s:i18n name="public">
+                    <input type="button" onmouseover="buttonover(this);" onmouseout="buttonout(this);"
+                           name="btnSave" onfocus="buttonover(this)" onblur="buttonout(this)"
+                           value="<s:text name="button_save"/>" class="submit"
+                           onclick="doSave('/$moduleName/${baseClassName}_save.do')"/>
+                    <input type="button" onmouseover="buttonover(this);" onmouseout="buttonout(this);"
+                           name="btnPrint" onfocus="buttonover(this)" onblur="buttonout(this)"
+                           value="<s:text name="button_print"/>" class="print" onclick="doPrint()">
+                    <input type="button" onmouseover="buttonover(this);" onmouseout="buttonout(this);"
+                           name="btnReturn" onfocus="buttonover(this)" onblur="buttonout(this)"
+                           value="<s:text name="button_return"/>" class="close"
+                           onclick="doReturn('/$moduleName/${baseClassName}_list.do')">
+					</s:i18n>
+                </td>
+            </tr>
+        </table>
+    </div>
+</s:form>
+</body>
+</html>

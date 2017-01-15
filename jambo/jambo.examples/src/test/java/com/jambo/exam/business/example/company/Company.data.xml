@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<!-- preparation data -->
+	<EXAM_COMPANY ID="1" COMPANYNAME="广州从兴电子" SHORTNAME="从兴" ADDRESS="1" CAPITAL="1" BANK="1" ACCOUNT="1" STATE="1"/>
+		
+</dataset>

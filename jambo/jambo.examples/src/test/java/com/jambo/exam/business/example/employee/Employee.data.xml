@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<!-- preparation data -->
+	<EXAM_EMPLOYEE ID="10" COMPANYID="1" EMPNAME="从兴xx" ADDRESS="1" BANK="1" ACCOUNT="1"/>
+		
+</dataset>

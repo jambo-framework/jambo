@@ -1,0 +1,73 @@
+/**
+ * auto-generated code
+ * $date
+ */
+$pkgName
+
+
+import java.io.Serializable;
+
+import com.sunrise.jop.exception.system.DelegateException;
+import com.sunrise.jop.infrastructure.control.ControlFactory;
+import com.sunrise.jop.infrastructure.db.DBAccessUser;
+import com.sunrise.jop.infrastructure.db.DataPackage;
+import $modelPkg.$poClassName;
+#if($isListVO.booleanValue())
+import $modelPkg.$listVOClassName;
+#end
+
+/**
+ * <p>Title: $className</p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: sunrise Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+public class $className {
+
+    private static $ejbInterfName control;
+
+    public $className() throws Exception {
+        control = ($ejbInterfName) ControlFactory.build($ejbClassCla);
+        if (null == control) {
+            throw new DelegateException(this.getClass());
+        }
+    }
+
+    public $poClassName doCreate($poClassName vo, DBAccessUser user)
+        throws Exception {
+        return control.doCreate(vo, user);
+    }
+
+    public void doRemoveByVO($poClassName vo, DBAccessUser user)
+        throws Exception {
+        control.doRemoveByVO(vo, user);
+    }
+
+    public void doRemoveByPK(Serializable pk, DBAccessUser user)
+        throws Exception {
+        if (null == pk || null == user) {
+            throw new IllegalArgumentException();
+        } else {
+            control.doRemoveByPK(pk, user);
+		}
+    }
+
+    public $poClassName doUpdate($poClassName vo, DBAccessUser user)
+        throws Exception {
+        return control.doUpdate(vo, user);
+    }
+
+    public $poClassName doFindByPk(Serializable pk, DBAccessUser user)
+        throws Exception {
+        return ($poClassName) control.doFindByPk(pk, user);
+    }
+
+#if($isListVO.booleanValue())
+    public DataPackage doQuery($listVOClassName params, DBAccessUser user)
+        throws Exception {
+        return control.doQuery(params, user);
+    }
+#end
+}

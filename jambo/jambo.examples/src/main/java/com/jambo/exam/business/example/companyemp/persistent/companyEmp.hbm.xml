@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<!-- 复杂查询demo VO， 公司职员人数统计。职员人数empNumber是公司表所没有的字段，需要单独作为视图来映射。
+		无对应集合查询需要新增VO类和 映射，table name 可以随便命名， sql语句返回的数据结构必须和新增的VO类对应。
+	 -->
+	<class name="com.jambo.exam.business.example.companyemp.persistent.CompanyEmpVO" table="EXAM_COMPANYEMP">
+		<id column="ID" name="id" type="java.lang.Long"/>	
+		<property column="COMPANYNAME" length="20" name="companyname" type="java.lang.String"/>
+		<property column="SHORTNAME" length="80" name="shortname" type="java.lang.String"/>
+		<property column="EMPNUMBER" length="5" name="empNumber" type="java.lang.Integer"/>
+	</class>
+
+	<sql-query name="queryCompanySum">
+		<return class="com.jambo.exam.business.example.companyemp.persistent.CompanyEmpVO" />
+			select t.id, t.companyname, t.shortname, b.empnumber from exam_company t,
+			( select s.companyid, count(id) empnumber from exam_employee s
+			group by s.companyid ) b 
+			where t.id = b.companyid
+	</sql-query>
+</hibernate-mapping>

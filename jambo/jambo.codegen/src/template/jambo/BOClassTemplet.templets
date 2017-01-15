@@ -1,0 +1,30 @@
+/**
+ * auto-generated code
+ * $date
+ */
+$pkgName
+
+import java.io.Serializable;
+import com.jambo.jop.infrastructure.control.AbstractBO;
+import com.jambo.jop.infrastructure.db.DAOFactory;
+import com.jambo.jop.infrastructure.db.DataPackage;
+
+/**
+ * <p>Title: $className </p>;
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2006</p>
+ * <p>Company: jambo-framework Tech Ltd.</p>
+ * @author $author
+ * @version 1.0
+ */
+public class $className extends AbstractBO {
+
+    @Override
+    protected Class getDAOClasses() {
+        return (${daoClassName}.class);
+    }
+
+    public $daoClassName getDAO() throws Exception {
+        return ($daoClassName)getBaseDAO();
+    }
+}
